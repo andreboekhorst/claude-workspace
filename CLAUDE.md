@@ -1,6 +1,6 @@
-# Claude Coworking Space
+# Claude Workspace
 - Name: Meeting Notes
-- Description: A Coworking Space for capturing meeting notes and tracking action items. Claude helps you take structured notes during or after meetings — but the notes are always yours.
+- Description: A Workspace for capturing meeting notes and tracking action items. Claude helps you take structured notes during or after meetings — but the notes are always yours.
 - Version: 0.1.0
 - Spec version: 0.1.0
 - Author: Anthropic

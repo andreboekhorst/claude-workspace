@@ -1,6 +1,6 @@
 ---
 name: setup
-description: Initial setup and configuration of the coworking space
+description: Initial setup and configuration of the workspace
 trigger: User says "set up my space", "configure", or opens the project for the first time
 requirements:
 ---
@@ -15,7 +15,7 @@ A short, conversational onboarding. Ask one question at a time — wait for an a
 
 Show this:
 
-> ## Meeting Notes Coworking Space
+> ## Meeting Notes Workspace
 > **Your AI note-taking partner**
 
 **Silently do the following** (don't list each folder — just report the result):

@@ -1,8 +1,8 @@
-# Claude Coworking Space.
+# Leverage Claude Workspace
 
 A Workspace is a folder that turns Claude into a domain-specific assistant. No code, no build steps — just markdown files and folder conventions.
 
-Workspaces are designed for Claude CoWork, a feature in the Claude Desktop app that lets you open a folder as a project. When Claude CoWork opens a folder, it reads the CLAUDE.md file and follows the instructions inside — that's all a Workspace is.
+Workspaces are designed for Claude Cowork, a feature in the Claude Desktop app that lets you open a folder as a project. When Claude Cowork opens a folder, it reads the CLAUDE.md file and follows the instructions inside — that's all a Workspace is.
 
 This repository is both the spec and a working example (a meeting notes assistant). Everything here demonstrates the patterns any Workspace should follow.
 
@@ -10,7 +10,7 @@ This repository is both the spec and a working example (a meeting notes assistan
 ## How to Use a Workspace
 
 1. Download the Workspace folder (or receive it as a zip)
-2. Open Claude Desktop and go to Claude CoWork
+2. Open Claude Desktop and go to Claude Cowork
 3. Open the folder as a project
 4. Claude reads CLAUDE.md, runs the setup workflow, and you're ready to go
 
@@ -160,7 +160,7 @@ This spec is a draft. We're working toward:
 
 - A skill that generates Workspaces from a description
 - A library of community Workspaces
-- Native Claude CoWork integration
+- Native Claude Cowork integration
 
 
 ## License
