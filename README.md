@@ -1,10 +1,20 @@
-# Leverage Claude Workspace
+# Claude Workspace Blueprint
 
 A Workspace is a folder that turns Claude into a domain-specific assistant. No code, no build steps — just markdown files and folder conventions.
 
 Workspaces are designed for Claude Cowork, a feature in the Claude Desktop app that lets you open a folder as a project. When Claude Cowork opens a folder, it reads the CLAUDE.md file and follows the instructions inside — that's all a Workspace is.
 
 This repository is both the spec and a working example (a meeting notes assistant). Everything here demonstrates the patterns any Workspace should follow.
+
+
+## Key Features
+
+- **Flexible blueprint** — A simple folder-and-markdown structure that adapts to any domain, from meeting notes to project management to customer support.
+- **Reusable workflows** — Define workflows once, use them across sessions. Each workflow is a standalone file that can be shared between workspaces.
+- **Project-based skills** — Turn Claude into a specialist by scoping its capabilities to a specific project or domain, without touching code.
+- **Project-based memory** — Context, preferences, and reference material live inside the workspace, so Claude picks up where you left off.
+- **Progressive disclosure** — Claude only loads what it needs, when it needs it. The entry point is lean; detailed instructions are read on-demand.
+- **No code required** — Everything is plain markdown. If you can write a bullet list, you can build a workspace.
 
 
 ## How to Use a Workspace
@@ -65,9 +75,33 @@ What the workspace needs. Two levels:
 
 If there are no hard requirements, say so explicitly.
 
+```markdown
+## Requirements
+
+### Hard
+None — this Workspace works out of the box.
+
+### Recommended
+- Google Calendar MCP: Enables the Prepare Meeting workflow to pull upcoming meetings, attendees, and agendas. Without it, meeting prep still works but relies on the user providing meeting details manually.
+```
+
 ### Folder Structure
 
 Lists all folders, split into system folders (versioned, part of the template) and user data folders (gitignored, created during setup).
+
+```markdown
+## Folder Structure
+
+### System folders (versioned, part of the template)
+- `_workspace/config/`: Internal system workflows
+- `_workspace/workflows/`: User-facing workflow instructions
+
+### User data folders (gitignored, personal to each user)
+- `_workspace/context/`: User preferences and configuration
+- `_workspace/logs/`: Session logs
+- `_workspace/sources/`: User-provided reference material
+- `meeting-notes/`: Meeting notes, one file per meeting
+```
 
 ### Workflows
 
@@ -77,6 +111,24 @@ Maps user intent to workflow files. Every entry needs a name, a file path, and t
 - User Workflows: What makes this workspace unique.
 
 Must end with: `Before executing any workflow, you MUST read its instruction file in full.`
+
+```markdown
+## Workflows
+Claude activates the matching workflow based on user intent. Read the user's intent and activate automatically — do not wait for a command.
+
+### Default Workflows
+These are default workflows that come with any workspace:
+- Setup (`_workspace/config/_setup.md`): Says "set up my space", "configure", or opens the project for the first time. System workflow.
+- Logging (`_workspace/config/_log.md`): Session logging, runs after every workflow. System workflow.
+- Add Context (`_workspace/config/_add-context.md`): Wants to add a document or reference material (e.g. "add this to sources", "convert this PDF", "save this document"). System workflow.
+
+### User Workflows
+- Note-Taking (`_workspace/workflows/notetaking.md`): Wants to capture meeting notes (e.g. "notes from today's standup", "let me recap the meeting", "new meeting note").
+- Tasks (`_workspace/workflows/tasks.md`): Asks to manage tasks or action items (e.g. "what are my open tasks?", "add a task", "show my action items").
+- Prepare Meeting (`_workspace/workflows/prepare-meeting.md`): Wants to prepare for an upcoming meeting (e.g. "prep me for my next meeting", "what do I need for the PVH sync?", "prepare for tomorrow's standup"). Requires Google Calendar MCP.
+
+Before executing any workflow, you MUST read its instruction file in full. This is progressive disclosure — the detailed instructions are loaded on-demand, not upfront.
+```
 
 ### Ground Rules
 
@@ -88,13 +140,33 @@ Must include at least these four:
 
 Authors can add more.
 
+```markdown
+## Ground Rules
+- Notes belong to the user: Never overwrite or delete existing notes without explicit permission.
+- Never invent: Only capture what the user actually said or provided. Don't add information that wasn't in the meeting.
+- Always log sessions: After completing any workflow, read and execute `_workspace/config/_log.md` to append an entry to the daily log. No log = session not finished.
+- Read files first: Before modifying any existing file, ALWAYS read it first. Never append to a file you haven't read in this session.
+```
+
 ### Tone (recommended)
 
 How Claude should communicate. Without it, Claude defaults to generic behavior.
 
+```markdown
+## Tone
+- Clear and direct
+- Match the user's energy: brief when they're brief, detailed when they want depth
+- Keep responses scannable: headers, short paragraphs, whitespace
+```
+
 ### Do Not (recommended)
 
 Explicit anti-patterns for this workspace.
+
+```markdown
+## Do Not
+- Ask for input for the sake of asking a question and if an answer is implied by the user already.
+```
 
 ### Setup Trigger
 
