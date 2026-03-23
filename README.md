@@ -1,31 +1,38 @@
-# Claude Workspace Blueprint
+![Header](header.jpg)
 
-A Workspace is a folder that turns Claude into a domain-specific assistant. No code, no build steps — just markdown files and folder conventions.
+# Claude Workspace - A Blueprint
 
-Workspaces are designed for Claude Cowork, a feature in the Claude Desktop app that lets you open a folder as a project. When Claude Cowork opens a folder, it reads the CLAUDE.md file and follows the instructions inside — that's all a Workspace is.
+Claude Cowork leverages the power of Claude Code while working in the Claude App. Unfortunately it is missing some features like project specific skills, memory or workflows.
+
+That's why we're proposing a blueprint for a Claude Workspace: A Workspace is a folder that turns Claude into a domain-specific assistant. A project that can just be opened as a folder within Claude. This project can have **multiple workflows** that are available to you.
 
 This repository is both the spec and a working example (a meeting notes assistant). Everything here demonstrates the patterns any Workspace should follow.
 
 
-## Key Features
+## ✨ Key Features
 
-- **Flexible blueprint** — A simple folder-and-markdown structure that adapts to any domain, from meeting notes to project management to customer support.
-- **Reusable workflows** — Define workflows once, use them across sessions. Each workflow is a standalone file that can be shared between workspaces.
-- **Project-based skills** — Turn Claude into a specialist by scoping its capabilities to a specific project or domain, without touching code.
-- **Project-based memory** — Context, preferences, and reference material live inside the workspace, so Claude picks up where you left off.
-- **Progressive disclosure** — Claude only loads what it needs, when it needs it. The entry point is lean; detailed instructions are read on-demand.
-- **No code required** — Everything is plain markdown. If you can write a bullet list, you can build a workspace.
+- 🏗️ **Flexible blueprint** — You can use this blueprint for any set of tasks
+- 🧙🏽‍♂️ **Setup Wizard** — An initial workflow will ask for user preferences and checks dependancies
+- 📚 **Context** — A custom context folder for user preferences and reference material.
+- 🔄 **Reusable workflows** — Define once, use across sessions and workspaces.
+- 🧠 **Logging** — Context and preferences persist between sessions.
+- 📦 **Progressive disclosure** — Only loads instructions when needed.
+- ✏️ **No code required** — Just markdown files and folders.
 
 
-## How to Use a Workspace
+## 🚀 How to Use a Workspace
 
 1. Download the Workspace folder (or receive it as a zip)
 2. Open Claude Desktop and go to Claude Cowork
 3. Open the folder as a project
-4. Claude reads CLAUDE.md, runs the setup workflow, and you're ready to go
+4. Say hi!, and a setup should start.
+
+## How does it work?
+Workspaces are designed for Claude Cowork, a feature in the Claude Desktop app that lets you open a folder as a project. When Claude Cowork opens a folder, it reads the CLAUDE.md file and follows the instructions inside. When needed it can read project-specific workflows for instructions that you give it, using a method called progressive disclosure.
 
 
-## Structure
+
+## 📁 Structure
 
 Every Workspace looks like this:
 
@@ -51,7 +58,7 @@ Rules:
 - All user data folders must be gitignored
 
 
-## CLAUDE.md
+## 📄 CLAUDE.md
 
 The entry point. Claude reads this upfront and uses it to route user intent to workflow files. It must contain these sections, in order:
 
@@ -148,7 +155,7 @@ Authors can add more.
 - Read files first: Before modifying any existing file, ALWAYS read it first. Never append to a file you haven't read in this session.
 ```
 
-### Tone (recommended)
+### Tone
 
 How Claude should communicate. Without it, Claude defaults to generic behavior.
 
@@ -159,7 +166,7 @@ How Claude should communicate. Without it, Claude defaults to generic behavior.
 - Keep responses scannable: headers, short paragraphs, whitespace
 ```
 
-### Do Not (recommended)
+### Do Not
 
 Explicit anti-patterns for this workspace.
 
@@ -177,7 +184,7 @@ ACTIVATE: Setup workflow — read `_workspace/config/_setup.md` and execute.
 ```
 
 
-## Workflow Files
+## 📝 Workflow Files
 
 Each workflow is a standalone markdown file. It should contain everything Claude needs — don't assume context from other files.
 
@@ -187,7 +194,7 @@ Guidelines:
 - State constraints: if the workflow has rules, state them explicitly
 
 
-## Default Workflows
+## ⚙️ Default Workflows
 
 Every workspace includes these three. They live in `_workspace/config/`.
 
@@ -217,7 +224,7 @@ Lets users add reference material. Must:
 3. Preserve content faithfully: no summarizing
 
 
-## Building Your Own
+## 🛠️ Building Your Own
 
 1. Copy this repo or create the structure from scratch
 2. Write your CLAUDE.md following the spec above
@@ -226,15 +233,10 @@ Lets users add reference material. Must:
 5. Zip and share
 
 
-## What's Next
+## 🔮 What's Next
 
 This spec is a draft. We're working toward:
 
 - A skill that generates Workspaces from a description
 - A library of community Workspaces
 - Native Claude Cowork integration
-
-
-## License
-
-[MIT](LICENSE)

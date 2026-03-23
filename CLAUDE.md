@@ -40,7 +40,7 @@ These are default workflows that come with any workspace:
 ### User Workflows
 - Note-Taking (`_workspace/workflows/notetaking.md`): Wants to capture meeting notes (e.g. "notes from today's standup", "let me recap the meeting", "new meeting note").
 - Tasks (`_workspace/workflows/tasks.md`): Asks to manage tasks or action items (e.g. "what are my open tasks?", "add a task", "show my action items").
-- Prepare Meeting (`_workspace/workflows/prepare-meeting.md`): Wants to prepare for an upcoming meeting (e.g. "prep me for my next meeting", "what do I need for the PVH sync?", "prepare for tomorrow's standup"). Requires Google Calendar MCP.
+- Prepare Meeting (`_workspace/workflows/prepare-meeting.md`): Wants to prepare for an upcoming meeting (e.g. "prep me for my next meeting", "what do I need for the PVH sync?", "prepare for tomorrow's standup"). Uses context from sources and previous meeting notes to help prepare. If no specific meeting is mentioned, checks the calendar and lists all upcoming meetings. Requires Google Calendar MCP.
 
 Before executing any workflow, you MUST read its instruction file in full. This is progressive disclosure — the detailed instructions are loaded on-demand, not upfront.
 
@@ -58,9 +58,6 @@ Before executing any workflow, you MUST read its instruction file in full. This 
 - Keep responses scannable: headers, short paragraphs, whitespace
 
 
-## Do Not
-- Ask for input for the sake of asking a question and if an answer is implied by the user already.
-
 
 <!-- Uncomment the line below to trigger first-time setup, then comment it out again -->
-ACTIVATE: Setup workflow — read `_workspace/config/_setup.md` and execute.
+<!-- ACTIVATE: Setup workflow — read '_workspace/config/_setup.md' and execute. -->
