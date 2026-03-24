@@ -21,20 +21,19 @@ First, check what the user actually said in their first message. They might have
 
 Show this:
 
-> ## 🐚 Let's build your Workspace
+> ## 🐚 Welcome to the Workspace Designer!
 >
-> Before we start — here's what we're doing.
+> A Workspace turns Claude into a domain-specific assistant — with its own skills, memory, and personality. You configure it once, and Claude remembers everything across sessions.
 >
-> **A Workspace is your personal AI command center.** You define what Claude knows, how it works, and what skills it has — and it remembers all of it across sessions.
+> What makes a Workspace special:
 >
-> Here's what makes a Workspace special:
+> - 🐚 **Project-specific workflows** — Repeatable skills tailored to your work. Define once, use forever.
+> - 🐚 **Context & memory** — Preferences and session logs persist between conversations.
+> - 🐚 **Connected tools** — Wire in calendars, search, APIs — whatever your workflows need.
+> - 🐚 **No code required** — Just markdown files. And you can improve your workspace while using it.
+> - 🐚 **Shareable** — Export and share your setup with others.
 >
-> - **Workflows** — Repeatable skills Claude learns and keeps forever. "Prep my meeting", "draft a blog post", "review this code" — you name it, Claude does it the same great way every time.
-> - **Memory** — Your workspace remembers context, preferences, and past sessions. No more re-explaining yourself.
-> - **Tools** — Connected services (calendars, search, APIs) that power your workflows behind the scenes.
-> - **Flexibility** — Everything can be tweaked, added, or rebuilt at any time. Nothing is locked in.
->
-> In a few minutes you'll have a fully configured workspace ready to go.
+> 🧙 **Let's walk through a quick setup wizard to get your workspace configured.**
 >
 > **First — what should I call you?**
 
