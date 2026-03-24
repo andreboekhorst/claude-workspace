@@ -15,6 +15,8 @@ Use `AskUserQuestion` for every question. One question at a time. Keep questions
 
 Never use blockquotes, bullet lists, or indented blocks when talking to the user. Write like you're texting a colleague — plain, clear sentences.
 
+Always start each new step with a horizontal ruler (`---`) to visually separate it from the previous step in the chat.
+
 ## Step indicator
 
 Every step MUST start with a progress indicator showing which step you're on. Format:
@@ -46,11 +48,36 @@ If they already described their goal, confirm it back in one sentence and ask if
 
 Otherwise ask: What do you want this workspace to help you with?
 
-That's it. One sentence question. No examples, no lists. If the answer is too vague, ask one short follow-up.
+That's it. One sentence question. No examples, no lists.
+
+## Dig into specific problems
+
+Don't settle for a general role or profession (e.g. "I'm a marketer"). You need to understand the **specific problems** the user wants solved.
+
+Good: "I spend hours every week writing LinkedIn posts and never know if they're any good"
+Bad: "I do content marketing"
+
+Good: "I need to turn client briefs into project plans with time estimates"
+Bad: "I'm a project manager"
+
+## Be a sparring partner (max 3 questions)
+
+Stay in Step 1 until the problem space is clear. This is the most important step — everything else builds on it. But keep it tight — **ask a maximum of 3 questions** before summarizing.
+
+- Ask one follow-up at a time. Be curious, not interrogative.
+- Reflect back what you're hearing — "So it sounds like the real bottleneck is X?" — to help the user sharpen their thinking.
+- Probe for the pain: What takes too long? What's repetitive? What do they dread? Where do things fall through the cracks?
+- If they give a broad answer, zoom in: "When you say content creation, what part specifically eats your time — the writing, the research, the scheduling?"
+- Keep the energy collaborative — you're thinking through this together, not running a questionnaire.
+- If the user is stuck, offer concrete examples to spark ideas: "Some people use this to manage meetings and agendas, track learning projects, draft client proposals, or plan weekly content — anything like that resonate?"
+
+After at most 3 questions, summarize the 2-4 problems you've identified and ask: "Are these the right problems to solve?" Only proceed to Step 2 when they confirm.
+
+Each workflow in Step 3 should map directly to a problem identified here.
 
 ---
 
-# Step 2 — Tools (show: **Step 2 / 5** — What tools do you have?)
+# Step 2 — Tools (show: 🔧 **Step 2 / 5** — What tools do you want to use?)
 
 ## Discover what's available
 
@@ -74,11 +101,13 @@ If there are no extra tools, skip the question and move on. If there are tools t
 
 ## What to propose
 
-Based on the user's purpose AND the tools they chose, propose the full workspace in a conversational way. No tables, no heavy formatting. Just tell them what you'd build:
+Based on the **specific problems** from Step 1 AND the tools they chose, propose the full workspace in a conversational way. No tables, no heavy formatting. Just tell them what you'd build:
 
 - Name the workspace
-- List 2-4 workflows with a one-liner each (mention connected tools naturally where relevant)
+- List 2-4 workflows — each one must solve a specific problem the user described in Step 1. Don't create generic workflows based on their profession; create workflows that directly address the pain points they told you about.
 - Suggest a tone
+
+After presenting the workflows, remind the user that nothing is set in stone — workflows can always be changed later, and new ones can be added anytime.
 
 End with: Anything to add, drop, or change?
 
@@ -161,9 +190,9 @@ For each confirmed workflow, read `/_workspace/config/_add-workflow.md` for the 
 
 ## Register workflows in CLAUDE.md
 
-Add each workflow to `### User Workflows`:
+Add each workflow to `### User Workflows` with an emoji, a clear description, and example trigger phrases:
 ```
-- [Name] (`_workspace/workflows/[filename].md`): [Trigger description with 2-3 example phrases]
+- [emoji] [Name] (`_workspace/workflows/[filename].md`): [Short description] — say "[trigger phrase]" or "[trigger phrase]"
 ```
 
 ## Disable the setup trigger

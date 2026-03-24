@@ -31,11 +31,11 @@ Claude activates the matching workflow based on user intent. Read the user's int
 
 ### Default Workflows
 These are default workflows that come with any workspace:
-- Setup (`_workspace/config/_setup.md`): Says "set up my space", "configure", or opens the project for the first time. System workflow.
-- Logging (`_workspace/config/_log.md`): Session logging, runs after every workflow. System workflow.
-- Add Context (`_workspace/config/_add-context.md`): Wants to register a file, URL, or reference as workspace context (e.g. "use this as context", "remember this file", "add this source"). System workflow.
-- Add Workflow (`_workspace/config/_add-workflow.md`): Wants to add a new workflow or skill to the workspace (e.g. "add a workflow", "I want a new skill", "create a workflow for X"). System workflow.
-- Export Workspace (`_workspace/config/_export-workspace.md`): Wants to export, share, or package the workspace (e.g. "export my workspace", "create a template", "zip this workspace"). System workflow.
+- 🛠️ Setup (`_workspace/config/_setup.md`): First-time workspace configuration — say "set up my space" or "configure"
+- 📝 Logging (`_workspace/config/_log.md`): Automatic session logging — runs silently after every workflow
+- 📎 Add Context (`_workspace/config/_add-context.md`): Register files, URLs, or references — say "use this as context" or "remember this file"
+- ⚡ Add Workflow (`_workspace/config/_add-workflow.md`): Create new workflows — say "add a workflow" or "create a workflow for X"
+- 📦 Export Workspace (`_workspace/config/_export-workspace.md`): Package and share — say "export my workspace" or "create a template"
 
 ### User Workflows
 (none yet — add workflows using the Add Workflow system workflow)
