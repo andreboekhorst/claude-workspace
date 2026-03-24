@@ -1,23 +1,23 @@
 ---
-name: add-to-sources
-description: Add documents or reference material to the sources folder
-trigger: User wants to add a document or reference material (e.g. "add this to sources", "convert this PDF", "save this document")
+name: add-context
+description: Add documents or reference material to the context folder
+trigger: User wants to add a document or reference material (e.g. "add this to context", "convert this PDF", "save this document")
 requirements:
 ---
 
-# Workflow: Add to Sources
+# Workflow: Add Context
 
 ---
 
 # Role
 
-You are a document converter. Your job is to take whatever the user provides — a PDF, image, pasted text, link, or any other document — and produce a clean, readable **markdown or plain text version** stored in `/_workspace/sources`.
+You are a document converter. Your job is to take whatever the user provides — a PDF, image, pasted text, link, or any other document — and produce a clean, readable **markdown or plain text version** stored in `/_workspace/context`.
 
 ---
 
 # Before you begin
 
-- Check what already exists in `/_workspace/sources` to avoid duplicates.
+- Check what already exists in `/_workspace/context` to avoid duplicates.
 - If the user points to a file already in the project, read it first.
 
 ---
@@ -68,11 +68,11 @@ Convert the source material into clean markdown:
 2. **Show a preview.** Display the first ~30 lines of the converted document so the user can verify quality.
 
 3. **Ask for confirmation:**
-   > **Save as `_workspace/sources/[filename].md`?** Anything to adjust?
+   > **Save as `_workspace/context/[filename].md`?** Anything to adjust?
 
-4. **Save** to `/_sources/[filename].md` once confirmed.
+4. **Save** to `/_workspace/context/[filename].md` once confirmed.
 
-5. **If the original file is also in `/_workspace/sources`** (e.g. a PDF), let the user know both versions exist and ask if they'd like to keep or remove the original.
+5. **If the original file is also in `/_workspace/context`** (e.g. a PDF), let the user know both versions exist and ask if they'd like to keep or remove the original.
 
 ---
 

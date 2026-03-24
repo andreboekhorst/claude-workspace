@@ -1,6 +1,6 @@
 # Claude Workspace
-- Name: Claude Workspace 
-- Description: This folder contains a vanilla Claude Workspace that still needs to be configures. A Claude Workspace is a set of tools and workflows that together form a suite of interconnected  
+- Name: Claude Workspace
+- Description: A vanilla Claude Workspace template. A Workspace is a structured folder of workflows, preferences, and context that turns Claude into a domain-specific assistant.
 - Version: 0.1.0
 - Author: (your name)
 
@@ -11,7 +11,7 @@
 None — this Workspace works out of the box.
 
 ### Recommended
-- Google Calendar MCP: Enables the Prepare Meeting workflow to pull upcoming meetings, attendees, and agendas. Without it, meeting prep still works but relies on the user providing meeting details manually.
+(none — specific workflows may recommend additional tools like MCP servers)
 
 
 ## Folder Structure
@@ -21,10 +21,8 @@ None — this Workspace works out of the box.
 - `_workspace/workflows/`: User-facing workflow instructions
 
 ### User data folders (gitignored, personal to each user)
-- `_workspace/context/`: User preferences and configuration
+- `_workspace/context/`: Reference material, background documents, and domain knowledge
 - `_workspace/logs/`: Session logs
-- `_workspace/sources/`: User-provided reference material
-- `meeting-notes/`: Meeting notes, one file per meeting
 
 
 ## Workflows
@@ -39,10 +37,7 @@ These are default workflows that come with any workspace:
 - Export Workspace (`_workspace/config/_export-workspace.md`): Wants to export, share, or package the workspace (e.g. "export my workspace", "create a template", "zip this workspace"). System workflow.
 
 ### User Workflows
-- Note-Taking (`_workspace/workflows/notetaking.md`): Wants to capture meeting notes (e.g. "notes from today's standup", "let me recap the meeting", "new meeting note").
-- Tasks (`_workspace/workflows/tasks.md`): Asks to manage tasks or action items (e.g. "what are my open tasks?", "add a task", "show my action items").
-- Prepare Meeting (`_workspace/workflows/prepare-meeting.md`): Wants to prepare for an upcoming meeting (e.g. "prep me for my next meeting", "prepare for tomorrow's standup"). Requires Google Calendar MCP.
-- Weekly Review (`_workspace/workflows/weekly-review.md`): Wants to reflect on the past week (e.g. "weekly review", "wrap up the week", "what happened this week", "week in review"). Uses Google Calendar MCP if available.
+(none yet — add workflows using the Add Workflow system workflow)
 
 Before executing any workflow, you MUST read its instruction file in full. This is progressive disclosure — the detailed instructions are loaded on-demand, not upfront.
 
@@ -56,7 +51,7 @@ When the user's message has no clear intent or specific instruction (e.g. a gree
 
 ## Ground Rules
 - Notes belong to the user: Never overwrite or delete existing notes without explicit permission.
-- Never invent: Only capture what the user actually said or provided. Don't add information that wasn't in the meeting.
+- Never invent: Only capture what the user actually said or provided. Don't add information that wasn't provided.
 - Always log sessions: After completing any workflow, read and execute `_workspace/config/_log.md` to append an entry to the daily log. No log = session not finished.
 - Read files first: Before modifying any existing file, ALWAYS read it first. Never append to a file you haven't read in this session.
 
@@ -67,8 +62,12 @@ When the user's message has no clear intent or specific instruction (e.g. a gree
 - Match the user's energy: brief when they're brief, detailed when they want depth
 - Keep responses scannable: headers, short paragraphs, whitespace
 
+## Do Not
+- Ask for input for the sake of asking a question when the answer is already implied by the user.
+- Invent information or add content the user didn't provide.
 
-<!-- Uncomment the line below to trigger first-time setup, then comment it out again -->
-<!-- ACTIVATE: Setup workflow — read `_workspace/config/_setup.md` and execute. -->
+
+<!-- The line below triggers first-run setup. It will be commented out automatically after setup completes. -->
+ACTIVATE: Setup workflow — read `_workspace/config/_setup.md` and execute.
 
 

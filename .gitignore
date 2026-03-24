@@ -1,4 +1,4 @@
 .claude
+.DS_Store
 /_workspace/logs/*
-/_workspace/sources/*
 /_workspace/context/*

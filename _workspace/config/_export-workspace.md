@@ -24,14 +24,14 @@ Ask the user using `AskUserQuestion`:
 
 > **How would you like to export?**
 >
-> 1. **Clean template** — A reusable workspace others can clone. Strips all personal data (logs, meeting notes, sources, context files). Keeps workflows, config, and structure.
+> 1. **Clean template** — A reusable workspace others can clone. Strips all personal data (logs, context files). Keeps workflows, config, and structure.
 > 2. **Full export** — A personal backup with everything included.
 
 **If clean template:** follow up with a second `AskUserQuestion`:
 
 > **What should this workspace be called?**
 > This name will appear in the README, CLAUDE.md, and zip filename.
-> *(e.g. "Meeting Notes Workspace", "Product Manager Toolkit", "Client Project Space")*
+> *(e.g. "Product Manager Toolkit", "Research Assistant", "Client Project Space")*
 
 Also ask for a **one-line description** of what this workspace is for. These will be used to generate the README and update the CLAUDE.md header in the exported template.
 
@@ -49,7 +49,6 @@ Before zipping anything, scan files that will be included for potentially sensit
   - Credentials, API keys, tokens
   - Confidential business information
 - `_workspace/preferences/*` — Check for personal details (name, role is fine — but flag if it contains anything beyond basic profile info)
-- `_workspace/sources/*` — May contain uploaded documents with sensitive content
 - Root-level files — Check for `.env`, credentials, or config files with secrets
 
 **Report findings to the user:**
@@ -88,18 +87,14 @@ For **full exports**: warn about sensitive files but include them unless the use
 
 **Include as empty folders (create `.gitkeep` inside):**
 - `_workspace/logs/`
-- `_workspace/sources/`
 - `_workspace/context/`
-- `meeting-notes/`
 
 **Exclude:**
 - `.git/`
 - `.claude/`
 - `.DS_Store` files
 - `_workspace/logs/*` (content only — keep folder)
-- `_workspace/sources/*` (content only — keep folder)
 - `_workspace/context/*` (content only — keep folder)
-- `meeting-notes/*` (content only — keep folder)
 - Any files flagged in the security scan
 - Any root-level files that are not part of the template (user-created files in root)
 
@@ -116,16 +111,15 @@ For **full exports**: warn about sensitive files but include them unless the use
   - **Name:**
   - **Role:**
 
-  ## Meetings
-  - **Typical meetings:**
-  - **Recurring meetings:**
-  - **Frequent collaborators:**
-
-  ## Note-Taking Style
-  - **Detail level:**
-  - **Top priorities:**
-  - **Tone:**
+  ## General
+  - **Primary use case:**
   - **Language:**
+
+  ## Communication Style
+  - **Detail level:**
+  - **Tone:**
+
+  ## Workflow-Specific Preferences
   ```
   ...and so on for all sections. The new user will fill these in during their own setup.
 
@@ -165,10 +159,8 @@ This is a **Claude Workspace** — a structured folder of workflows, preferences
 | `_workspace/config/` | System workflows (don't edit) |
 | `_workspace/workflows/` | User-facing workflows |
 | `_workspace/preferences/` | Your preferences (filled during setup) |
-| `_workspace/context/` | Your reference documents |
-| `_workspace/sources/` | Uploaded source material |
+| `_workspace/context/` | Reference material and domain knowledge |
 | `_workspace/logs/` | Session logs |
-| `meeting-notes/` | Your meeting notes |
 ```
 
 Populate the workflows table by reading the frontmatter (`name`, `description`, `trigger`) from each file in `_workspace/workflows/`. Only include user workflows, not system config workflows.
@@ -186,7 +178,7 @@ Populate the workflows table by reading the frontmatter (`name`, `description`, 
 # Phase 4 — Create and deliver
 
 1. **Determine filename:**
-   - Clean template: `[workspace-name-slugified]_template_YYYY-MM-DD.zip` (e.g. `meeting-notes-workspace_template_2026-03-24.zip`)
+   - Clean template: `[workspace-name-slugified]_template_YYYY-MM-DD.zip` (e.g. `my-workspace_template_2026-03-24.zip`)
    - Full export: `workspace-export_YYYY-MM-DD.zip`
 
 2. **Ask the user** where to save the zip using `AskUserQuestion`:
