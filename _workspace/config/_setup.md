@@ -15,21 +15,21 @@ Use `AskUserQuestion` for every question. One question at a time. Keep questions
 
 Never use blockquotes, bullet lists, or indented blocks when talking to the user. Write like you're texting a colleague — plain, clear sentences.
 
+## Step indicator
+
+Every step MUST start with a progress indicator showing which step you're on. Format:
+
+**Step X / 5** — [step name]
+
+This helps the user know where they are in the process and how much is left.
+
 ---
 
-# Step 1 — Welcome
+# Step 1 — Welcome & Purpose (show: **Step 1 / 5** — What's this workspace for?)
 
 Check what the user already said. They might have already told you everything you need.
 
-Greet them warmly in 2-3 sentences. Explain that a **Workspace** is a shareable, reusable package of workflows, documents, and memory that gives **Claude Cowork** persistent skills and personality across sessions. You set it up once, use it every day, and can share it with others. Then ask their name.
-
-Ask: What should I call you?
-
----
-
-# Step 2 — Purpose
-
-## Ask the user
+Greet them warmly in 2-3 sentences. Explain that a **Workspace** is a shareable, reusable package of workflows, documents, and memory that gives **Claude Cowork** persistent skills and personality across sessions. You set it up once, use it every day, and can share it with others.
 
 If they already described their goal, confirm it back in one sentence and ask if that's right.
 
@@ -39,7 +39,7 @@ That's it. One sentence question. No examples, no lists. If the answer is too va
 
 ---
 
-# Step 3 — Tools
+# Step 2 — Tools (show: **Step 2 / 5** — What tools do you have?)
 
 ## Discover what's available
 
@@ -55,11 +55,11 @@ If nothing was found beyond the defaults, say so — something like "You don't h
 
 Ask: Which of these do you want me to use in your workspace?
 
-If there are no extra tools, skip the question and move on. If there are tools that clearly match the user's purpose from Step 2, you can suggest those specifically — but still let them confirm.
+If there are no extra tools, skip the question and move on. If there are tools that clearly match the user's purpose from Step 1, you can suggest those specifically — but still let them confirm.
 
 ---
 
-# Step 4 — Workflows + identity
+# Step 3 — Workflows + identity (show: **Step 3 / 5** — Designing your workspace)
 
 ## What to propose
 
@@ -84,7 +84,7 @@ Iterate until they're happy. Keep each round short.
 
 ---
 
-# Step 5 — Build
+# Step 4 — Build (show: **Step 4 / 5** — Building it)
 
 Tell them you're building it. Then silently do all of the following:
 
@@ -161,7 +161,7 @@ Comment out the ACTIVATE line at the bottom of `CLAUDE.md`:
 
 ---
 
-# Step 6 — Reveal
+# Step 5 — Reveal (show: **Step 5 / 5** — Your workspace is ready)
 
 ## What to show
 
