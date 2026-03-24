@@ -1,13 +1,13 @@
 # User Preferences
 
 ## About
-- **Name:** Andre
-- **Role:** Product Manager
+- **Name:** (not set)
+- **Role:** (not set)
 
 ## Meetings
-- **Typical meetings:** Standups, 1:1s, planning sessions, client calls, and more
-- **Recurring meetings:** none specified
-- **Frequent collaborators:** none specified
+- **Typical meetings:** (not set)
+- **Recurring meetings:** (not set)
+- **Frequent collaborators:** (not set)
 
 ## Note-Taking Style
 - **Detail level:** moderate

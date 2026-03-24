@@ -2,7 +2,7 @@
 - Name: Claude Workspace 
 - Description: This folder contains a vanilla Claude Workspace that still needs to be configures. A Claude Workspace is a set of tools and workflows that together form a suite of interconnected  
 - Version: 0.1.0
-- Author: André Boekhorst
+- Author: (your name)
 
 
 ## Requirements
@@ -41,7 +41,7 @@ These are default workflows that come with any workspace:
 ### User Workflows
 - Note-Taking (`_workspace/workflows/notetaking.md`): Wants to capture meeting notes (e.g. "notes from today's standup", "let me recap the meeting", "new meeting note").
 - Tasks (`_workspace/workflows/tasks.md`): Asks to manage tasks or action items (e.g. "what are my open tasks?", "add a task", "show my action items").
-- Prepare Meeting (`_workspace/workflows/prepare-meeting.md`): Wants to prepare for an upcoming meeting (e.g. "prep me for my next meeting", "what do I need for the PVH sync?", "prepare for tomorrow's standup"). Requires Google Calendar MCP.
+- Prepare Meeting (`_workspace/workflows/prepare-meeting.md`): Wants to prepare for an upcoming meeting (e.g. "prep me for my next meeting", "prepare for tomorrow's standup"). Requires Google Calendar MCP.
 - Weekly Review (`_workspace/workflows/weekly-review.md`): Wants to reflect on the past week (e.g. "weekly review", "wrap up the week", "what happened this week", "week in review"). Uses Google Calendar MCP if available.
 
 Before executing any workflow, you MUST read its instruction file in full. This is progressive disclosure — the detailed instructions are loaded on-demand, not upfront.
