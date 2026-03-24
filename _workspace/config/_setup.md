@@ -29,12 +29,7 @@ Ask: What should I call you?
 
 # Step 2 — Purpose
 
-While processing this step, silently discover available tools:
-1. Use `ToolSearch` with broad queries to find all available MCP servers and deferred tools.
-2. Note available skills from the system-reminder.
-3. Note built-in capabilities (WebSearch, WebFetch, Bash, file tools).
-
-Keep this discovery silent — you'll use it in Step 3.
+## Ask the user
 
 If they already described their goal, confirm it back in one sentence and ask if that's right.
 
@@ -44,9 +39,31 @@ That's it. One sentence question. No examples, no lists. If the answer is too va
 
 ---
 
-# Step 3 — Workflows + tools + identity
+# Step 3 — Tools
 
-Based on what the user described AND the tools you discovered, propose the full workspace in a conversational way. No tables, no heavy formatting. Just tell them what you'd build:
+## Discover what's available
+
+Use `ToolSearch` with broad queries to find all available MCP servers and deferred tools. Also check the system-reminder for available skills. Note built-in capabilities too (WebSearch, WebFetch, Bash, file tools).
+
+## Present tools to the user
+
+Tell the user what you found, grouped by type. Keep it casual — just name each tool and say in one sentence what it can do. For example: "I can see you have Google Calendar connected — that lets me read and create events for you."
+
+If nothing was found beyond the defaults, say so — something like "You don't have any extra tools connected right now, but the basics are covered: web search, file management, and running commands."
+
+## Ask what to enable
+
+Ask: Which of these do you want me to use in your workspace?
+
+If there are no extra tools, skip the question and move on. If there are tools that clearly match the user's purpose from Step 2, you can suggest those specifically — but still let them confirm.
+
+---
+
+# Step 4 — Workflows + identity
+
+## What to propose
+
+Based on the user's purpose AND the tools they chose, propose the full workspace in a conversational way. No tables, no heavy formatting. Just tell them what you'd build:
 
 - Name the workspace
 - List 2-4 workflows with a one-liner each (mention connected tools naturally where relevant)
@@ -54,9 +71,12 @@ Based on what the user described AND the tools you discovered, propose the full 
 
 End with: Anything to add, drop, or change?
 
+## Iteration
+
 Iterate until they're happy. Keep each round short.
 
-Key principles:
+## Key principles
+
 - Be creative and specific to their world
 - Leverage discovered tools naturally
 - Make each workflow feel like a superpower
@@ -64,16 +84,19 @@ Key principles:
 
 ---
 
-# Step 4 — Build
+# Step 5 — Build
 
 Tell them you're building it. Then silently do all of the following:
 
-4a. Create folders (if missing):
+## Create folders
+
+Create these if missing:
 - `/_workspace/logs`
 - `/_workspace/workflows`
 - `/_workspace/preferences`
 
-4b. Update CLAUDE.md:
+## Update CLAUDE.md
+
 - Replace `Name:` with the workspace name
 - Replace `Author:` with the user's name
 - Replace `Description:` with a one-line description
@@ -82,7 +105,9 @@ Tell them you're building it. Then silently do all of the following:
 - If MCP servers are used, update `### Recommended`
 - Add `## Do Not` entries if the user mentioned boundaries
 
-4c. Save preferences to `/_workspace/preferences/preferences.md`:
+## Save preferences
+
+Write to `/_workspace/preferences/preferences.md`:
 
 ```markdown
 # User Preferences
@@ -111,7 +136,8 @@ Tell them you're building it. Then silently do all of the following:
 (none yet — workflows will add their own sections here as you use them)
 ```
 
-4d. Create workflow files.
+## Create workflow files
+
 For each confirmed workflow, read `/_workspace/config/_add-workflow.md` for the template structure, then write a complete workflow file to `/_workspace/workflows/[name].md`. Each workflow should be:
 - Self-contained (no assumed context from other files)
 - 60-120 lines
@@ -120,23 +146,33 @@ For each confirmed workflow, read `/_workspace/config/_add-workflow.md` for the 
 - Tool-aware — reference selected tools where relevant, list them in frontmatter `requirements:`
 - Smart about triggers — infer natural phrases from the conversation
 
-4e. Register workflows in CLAUDE.md.
+## Register workflows in CLAUDE.md
+
 Add each workflow to `### User Workflows`:
 ```
 - [Name] (`_workspace/workflows/[filename].md`): [Trigger description with 2-3 example phrases]
 ```
 
-4f. Disable the setup trigger.
+## Disable the setup trigger
+
 Comment out the ACTIVATE line at the bottom of `CLAUDE.md`:
 `<!-- ACTIVATE: Setup workflow — read '_workspace/config/_setup.md' and execute. -->`
 
 ---
 
-# Step 5 — Reveal
+# Step 6 — Reveal
 
-Keep the reveal conversational too. Tell them the workspace is ready, list what was built with a short description and an example trigger phrase for each workflow, mention connected tools if any, and remind them they can add or change workflows anytime.
+## What to show
+
+Keep the reveal conversational too. Tell them the workspace is ready, list what was built with a short description and an example trigger phrase for each workflow, mention connected tools if any.
+
+## Remind them it's flexible
+
+Let them know they can add or change workflows anytime.
 
 End with: What would you like to try first?
+
+## Log the session
 
 Log this setup session to `/_workspace/logs/`.
 
