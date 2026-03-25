@@ -61,11 +61,11 @@ Check what the user already said. They might have already told you everything yo
 Before asking open-ended questions, read `/_playbooks/_index.md` and pick the **5 playbooks** that are most broadly useful or likely to resonate. Present them as a short list in conversation — one line each, name and description. For example:
 
 Here are some ideas to get started:
-1. **Content Pipeline** — Plan, draft, edit, publish content on a schedule
-2. **Meeting Operations** — Prep agendas, run meetings, capture decisions
-3. **Product Discovery** — Research users, validate ideas, write specs
-4. **Research Project** — Systematic investigation with structured findings
-5. **Client Engagement** — Proposals, deliverables, status reports
+1. **Create Content** — Actions: Plan, draft, edit, publish content on a schedule
+2. **Manage Meetings** — Actions: Prep agendas, run meetings, capture decisions
+3. **Discover Products** — Actions: Research users, validate ideas, write specs
+4. **Run Research** — Actions: Systematic investigation with structured findings
+5. **Improve Client Engagement** — Actions: Proposals, deliverables, status reports
 
 Then use `AskUserQuestion` with these options:
 - **One of these** — "One of these looks right" (let me pick)
@@ -73,10 +73,21 @@ Then use `AskUserQuestion` with these options:
 - **Build my own** — "I have something else in mind"
 
 ### If the user picks one
-Read that playbook file in full. Confirm it back in one sentence: "So the goal is [playbook description] — does that capture it?" Then proceed to "Lock in the playbook" below.
+Read that playbook file in full. Don't ask for confirmation — just proceed directly to "Lock in the playbook" below and continue to Step 2.
 
 ### If the user wants to see more
-Show the remaining 15 playbooks, grouped by category (use the index groupings). Then ask again: pick one, or build your own?
+Show the remaining playbooks as a clean numbered list — **name only**, no actions or descriptions. Group them by category using the index groupings as headers. For example:
+
+**Product & Strategy**
+6. Roadmap Planning
+7. Strategic Planning
+8. Venture Launch
+
+**Content & Communication**
+9. Campaign Management
+...etc
+
+Then ask again: pick one, or build your own?
 
 ### If the user wants to build their own
 Ask: What do you want this workspace to help you with?
@@ -129,17 +140,15 @@ Each action in Step 3 should map directly to a problem the user confirmed.
 
 Use `ToolSearch` with broad queries to find all available MCP servers and deferred tools. Also check the system-reminder for available skills. Note built-in capabilities too (WebSearch, WebFetch, Bash, file tools).
 
-## Present tools to the user
+## Propose tools to the user
 
-Tell the user what you found, grouped by type. Keep it casual — just name each tool and say in one sentence what it can do. If a playbook was matched, lead with the tools it recommends and explain why they're useful for this specific workspace. For example: "I can see you have Google Calendar connected — since you're managing meetings, that's going to be key for pulling in agendas and scheduling."
+Based on the playbook's recommended tools and what's actually available, propose a specific set of tools you'd enable. Present them as a short list — name and one sentence on why it's useful for this workspace. If nothing extra was found beyond the defaults, say so briefly.
 
-If nothing was found beyond the defaults, say so — something like "You don't have any extra tools connected right now, but the basics are covered: web search, file management, and running commands." If the matched playbook recommends tools that aren't available, mention what they'd unlock so the user can decide whether to set them up.
+Then use `AskUserQuestion` with:
+- **Looks good** — proceed with the proposed tools
+- **I want to change something** — let the user adjust
 
-## Ask what to enable
-
-Ask: Which of these do you want me to use in your workspace?
-
-If there are no extra tools, skip the question and move on. If there are tools that clearly match the user's purpose from Step 1, you can suggest those specifically — but still let them confirm.
+Don't ask an open-ended question about which tools to enable. Just propose and let them approve or tweak.
 
 ---
 
@@ -147,15 +156,16 @@ If there are no extra tools, skip the question and move on. If there are tools t
 
 ## What to propose
 
-Based on the **specific problems** from Step 1, the tools they chose, AND any matched playbook's "Action blueprints to use" list, propose the full workspace in a conversational way. For each proposed action, silently read the relevant blueprint from `/_playbooks/action_blueprints/` to inform the action's structure, but always ground suggestions in the user's stated problems — blueprints inform, they don't dictate. No tables, no heavy formatting. Just tell them what you'd build:
+Silently read the relevant blueprints from `/_playbooks/action_blueprints/` to inform your design, but keep the presentation ultra-compact. Present the workspace like this:
 
-- Name the workspace
-- List 2-4 actions — each one must solve a specific problem the user described in Step 1. Don't create generic actions based on their profession; create actions that directly address the pain points they told you about.
-- Suggest a tone
+1. Name the workspace
+2. List actions as a tight bullet list — each action is just a name and a single short sentence (max 10 words). No trigger phrases, no detailed explanations. For example:
+   - **Research** — Investigate a topic and summarize findings
+   - **Brainstorm** — Generate and cluster ideas around a challenge
+   - **Decide** — Score options and produce a decision record
+3. One line for tone
 
-After presenting the actions, remind the user that nothing is set in stone — actions can always be changed later, and new ones can be added anytime.
-
-End with: Anything to add, drop, or change?
+End with: Anything to add, drop, or change? You can always tweak actions later.
 
 ## Iteration
 
@@ -163,9 +173,9 @@ Iterate until they're happy. Keep each round short.
 
 ## Key principles
 
+- Keep the proposal scannable — the user should grasp the whole workspace in 5 seconds
+- Each action is one bullet, one line. No paragraphs.
 - Be creative and specific to their world
-- Leverage discovered tools naturally
-- Make each action feel like a superpower
 - 2-4 actions is the sweet spot
 
 ---
@@ -184,14 +194,30 @@ Create these if missing:
 
 ## Update CLAUDE.md
 
-- Update `## Folder Structure` to include any new subfolders created under `/files/`
 - Replace `Name:` with the workspace name
 - Replace `Author:` with the user's name
 - Replace `Description:` with a one-line description
+- Update `## Folder Structure` to include any new subfolders created under `/files/`
 - Update `## Tone` to reflect the chosen tone
 - Update `## Claude Tools` with the selected tools (keep `AskUserQuestion` always)
 - If MCP servers are used, update `### Recommended`
 - Add `## Do Not` entries if the user mentioned boundaries
+
+### Write a comprehensive workspace description
+
+This is critical. After updating the metadata above, add a new `## About This Workspace` section immediately after the header block (Name/Description/Version/Author) and before `## Requirements`. This section must paint a complete picture of the workspace so that anyone reading CLAUDE.md — including Claude in a future session — immediately understands:
+
+1. **Purpose** — What this workspace exists to do. Not a generic tagline — a clear 2-3 sentence explanation of the specific problem space it addresses and who it's for.
+
+2. **How it works** — A plain-language explanation of the workspace's operating model. How does the user interact with it? What's the typical flow? Think of this as the "user manual in 5 sentences."
+
+3. **How the tools work together** — This is the most important part. Explain the full toolchain: which tools were configured, what role each one plays, and how they connect. For example, if the workspace uses Google Calendar + WebSearch + file tools, explain: "Google Calendar provides scheduling context. WebSearch fetches external information. File tools store outputs in `files/`. Actions combine these — e.g. the Prep action reads tomorrow's calendar, researches attendees, and saves a briefing doc." Be concrete and specific to THIS workspace — no generic descriptions.
+
+4. **Actions overview** — A brief narrative (not a list — the list is already in `## Actions`) explaining how the actions relate to each other and form a workflow. For example: "The typical workflow starts with Research to gather context, moves to Draft to produce output, and finishes with Review to polish it. Each action builds on the previous one's output."
+
+5. **What makes this workspace useful** — 2-3 sentences on what this workspace automates or simplifies compared to doing the work manually. What would the user have to do by hand without it?
+
+Write this section in clear, direct prose — not bullet lists. Use short paragraphs. The goal is that someone reading this section gets the full picture without needing to read any action files. Aim for 150-300 words total.
 
 ## Save user settings
 
