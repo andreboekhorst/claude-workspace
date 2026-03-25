@@ -18,7 +18,9 @@ None — this Workspace works out of the box.
 
 ### System folders (versioned, part of the template)
 - `_workspace/config/`: Internal system workflows
+- `_workspace/config/blueprints/`: Workflow reference outlines — building blocks for creating workflows
 - `_workspace/workflows/`: User-facing workflow instructions
+- `_playbooks/`: Workspace playbooks — curated bundles used during setup (removable after)
 
 ### User data folders (gitignored, personal to each user)
 - `_workspace/logs/`: Session logs

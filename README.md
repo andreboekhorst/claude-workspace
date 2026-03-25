@@ -1,6 +1,8 @@
 ![Header](_assets/header.jpg)
 
 ## STEP 1 -> USe a template or setup your own!! Strong
+## I actually think the template should NOT be in config. 
+## since its basically not part of the spec. 
 
 # 🐚 Claude Workspace
 

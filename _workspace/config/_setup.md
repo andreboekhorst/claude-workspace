@@ -89,6 +89,16 @@ After at most 3 questions, summarize the 2-4 problems you've identified and ask:
 
 Each workflow in Step 3 should map directly to a problem identified here.
 
+## Consult playbooks (internal — don't mention to user)
+
+After the user confirms the problem summary, silently read `/_playbooks/_index.md`. If a playbook matches the user's project or goal, read that playbook file. Use it to:
+- Inform tool suggestions in Step 2 (check the playbook's "Required tools & skills")
+- Suggest relevant reference types in Step 3
+- Shape workflow proposals in Step 4 (draw from the playbook's "Workflow blueprints to use")
+- Guide folder structure in Step 5
+
+Never mention playbooks or blueprints to the user. They're internal scaffolding.
+
 ---
 
 # Step 2 — Tools (show: 🔧 **Step 2 / 6** — What tools do you want to use?)
@@ -137,7 +147,7 @@ The user might want to add several things at once. Process them one by one — r
 
 ## What to propose
 
-Based on the **specific problems** from Step 1 AND the tools they chose, propose the full workspace in a conversational way. No tables, no heavy formatting. Just tell them what you'd build:
+Based on the **specific problems** from Step 1, the tools they chose, AND any matched playbook's "Workflow blueprints to use" list, propose the full workspace in a conversational way. For each proposed workflow, silently read the relevant blueprint from `/_workspace/config/blueprints/` to inform the workflow's structure, but always ground suggestions in the user's stated problems — blueprints inform, they don't dictate. No tables, no heavy formatting. Just tell them what you'd build:
 
 - Name the workspace
 - List 2-4 workflows — each one must solve a specific problem the user described in Step 1. Don't create generic workflows based on their profession; create workflows that directly address the pain points they told you about.
@@ -216,12 +226,12 @@ Write to `/_workspace/references/user-settings.md`:
 
 ## Create workflow files
 
-For each confirmed workflow, read `/_workspace/config/_add-workflow.md` for the template structure, then write a complete workflow file to `/_workspace/workflows/[name].md`. Each workflow should be:
+For each confirmed workflow, read `/_workspace/config/_add-workflow.md` for the template structure. Also consult the relevant workflow blueprint(s) from `/_workspace/config/blueprints/` for phase structure, quality signals, and tool dependencies. Then write a complete workflow file to `/_workspace/workflows/[name].md`. Each workflow should be:
 - Self-contained (no assumed context from other files)
 - 60-120 lines
 - Specific about file paths, naming conventions, and output format
-- Include quality rules
-- Tool-aware — reference selected tools where relevant, list them in frontmatter `requirements:`
+- Include quality rules (informed by blueprint quality signals where relevant)
+- Tool-aware — reference selected tools where relevant, list them in frontmatter `requirements:` (use the blueprint's `tools:` field as a starting point)
 - Smart about triggers — infer natural phrases from the conversation
 
 ## Register workflows in CLAUDE.md
@@ -255,6 +265,8 @@ Tell them the workspace is ready, then:
 ## Remind them it's flexible
 
 Let them know they can add or change workflows anytime.
+
+Also mention that the `_playbooks/` folder at the root was used during setup and can be safely deleted if they want to keep the workspace clean.
 
 End with: What would you like to try first?
 
