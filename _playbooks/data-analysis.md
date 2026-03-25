@@ -20,7 +20,7 @@ and narrative reporting.
 - Past analyses are not documented, leading to duplicate work.
 
 
-## Workflow blueprints to use
+## Action blueprints to use
 
 - **Research** — Understand the domain and context before diving into data.
 - **Synthesize** — Combine data from multiple sources and identify patterns.

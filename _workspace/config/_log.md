@@ -1,13 +1,13 @@
 ---
 name: log
-description: Log completed workflow sessions to a daily log file
-trigger: Automatically invoked after any workflow completes — not user-triggered
+description: Log completed action sessions to a daily log file
+trigger: Automatically invoked after any action completes — not user-triggered
 requirements: none
 ---
 
-# Workflow: Log Session
+# Action: Log Session
 
-This workflow runs at the end of every completed workflow. It appends a structured entry to the daily log file.
+This action runs at the end of every completed action. It appends a structured entry to the daily log file.
 
 ---
 
@@ -32,11 +32,11 @@ This workflow runs at the end of every completed workflow. It appends a structur
 Each entry follows this exact structure. Do not deviate.
 
 ```markdown
-## hh:mm — [Workflow Name]
+## hh:mm — [Action Name]
 
 | Field        | Value                                  |
 |--------------|----------------------------------------|
-| **Workflow** | [workflow name, e.g. setup / add-reference / add-workflow] |
+| **Action**   | [action name, e.g. setup / add-reference / add-action] |
 | **Trigger**  | [what the user said or did to start it] |
 | **Duration** | [approximate: short / medium / long]   |
 
@@ -57,7 +57,7 @@ Each entry follows this exact structure. Do not deviate.
 - **Be factual.** Only log what actually happened. Never invent or embellish.
 - **Be brief.** Each bullet should be one line. No paragraphs.
 - **Use 24h time** in the entry header (e.g. `## 14:30 — Note-Taking`).
-- **Artifacts must include full paths** relative to project root (e.g. `/_workspace/workflows/some_file.md`).
+- **Artifacts must include full paths** relative to project root (e.g. `/_workspace/actions/some_file.md`).
 - **Open threads** are for things the user explicitly deferred or that remain unresolved. Don't manufacture them.
 - **Never log private content.** Summarize what was discussed at topic level, don't copy meeting content into the log.
 - **Separate entries** with a blank line between them. Nothing else.

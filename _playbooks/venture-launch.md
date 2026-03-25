@@ -18,7 +18,7 @@ A workspace for founders and entrepreneurial teams going from idea to launch. Th
 - Founders spend time on low-leverage tasks instead of the riskiest assumptions
 
 
-## Workflow blueprints to use
+## Action blueprints to use
 
 - **Research** — Investigate the market, target users, and competitive landscape
 - **Brainstorm** — Generate and explore solution approaches, business models, and positioning

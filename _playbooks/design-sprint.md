@@ -20,7 +20,7 @@ divergent ideation, and rapid validation.
 - Design decisions are not documented, making it hard to explain rationale later.
 
 
-## Workflow blueprints to use
+## Action blueprints to use
 
 - **Research** — Gather user insights, competitive landscape, and constraints.
 - **Brainstorm** — Generate diverse ideas using structured divergent thinking.

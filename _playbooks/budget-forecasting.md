@@ -16,7 +16,7 @@ A workspace for getting control of budgets and forecasts. Covers tracking actual
 - There is no scenario planning, so when conditions change, the team has no pre-built models to evaluate options.
 - Budget discussions lack structure, leading to decisions driven by who argues loudest rather than by data.
 
-## Workflow blueprints to use
+## Action blueprints to use
 
 - **Research** — Gather and organize historical spending data, existing budgets, and financial baselines into a clear picture.
 - **Compare** — Build side-by-side scenario models (best case, expected, worst case) to evaluate different budget paths.

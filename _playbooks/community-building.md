@@ -16,7 +16,7 @@ A workspace for community managers and team leads who need to keep a community h
 - Growth has stalled — new member acquisition has flatlined and there is no clear strategy to restart it.
 - Patterns go unnoticed — recurring complaints, popular topics, and emerging leaders are invisible without deliberate scanning.
 
-## Workflow blueprints to use
+## Action blueprints to use
 
 - **Scan** — Monitor community channels for emerging themes, sentiment shifts, and conversations that need attention.
 - **Research** — Investigate what similar communities are doing, identify growth tactics, and study engagement patterns.

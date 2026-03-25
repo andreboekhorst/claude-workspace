@@ -18,7 +18,7 @@ A workspace for teams and individuals who need to move from assumptions to valid
 - Decisions lack traceability: no one remembers why something was prioritized
 
 
-## Workflow blueprints to use
+## Action blueprints to use
 
 - **Research** — Capture and structure findings from user interviews, surveys, and analytics
 - **Synthesize** — Turn raw research into patterns, themes, and actionable insights

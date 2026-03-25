@@ -18,7 +18,7 @@ A workspace for turning a backlog of ideas into a sequenced, stakeholder-aligned
 - Roadmap documents go stale because updating them is painful
 
 
-## Workflow blueprints to use
+## Action blueprints to use
 
 - **Prioritize** — Score and rank features or initiatives using consistent criteria
 - **Map** — Lay out dependencies, sequences, and timelines visually

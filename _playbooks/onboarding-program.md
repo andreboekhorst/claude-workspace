@@ -16,7 +16,7 @@ A workspace for building onboarding programs that get new hires productive faste
 - Knowledge transfer gaps mean critical information lives in people's heads instead of in accessible documentation.
 - Managers lack visibility into onboarding progress, so problems surface too late to fix.
 
-## Workflow blueprints to use
+## Action blueprints to use
 
 - **Plan** — Design a week-by-week onboarding timeline with milestones, covering the first 30, 60, and 90 days.
 - **Checklist** — Build day-by-day task lists for new hires and their managers so nothing gets missed.

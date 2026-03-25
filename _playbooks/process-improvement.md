@@ -16,12 +16,12 @@ A workspace for systematically improving how work gets done. Start by understand
 - Changes that do get made don't stick because they aren't documented, communicated, or reinforced.
 - There is no baseline measurement, making it impossible to know if an improvement actually improved anything.
 
-## Workflow blueprints to use
+## Action blueprints to use
 
 - **Research** — Map the current process end-to-end, interviewing stakeholders and documenting each step, handoff, and decision point.
 - **Evaluate** — Analyze the current state for bottlenecks, redundancies, delays, and failure points using structured criteria.
 - **Decide** — Prioritize which improvements to make based on effort, impact, and risk, so resources go where they matter most.
-- **Document** — Write clear process documentation for the redesigned workflow, including roles, steps, and decision rules.
+- **Document** — Write clear process documentation for the redesigned process, including roles, steps, and decision rules.
 - **Checklist** — Create implementation checklists for rolling out the new process and verifying adoption.
 
 ## Required tools & skills

@@ -16,7 +16,7 @@ A workspace for people who run meetings and need them to actually produce result
 - Too many meetings happen by default — no one evaluates whether a meeting is the right format for the discussion.
 - Recurring meetings drift from their original purpose and accumulate stale agenda items.
 
-## Workflow blueprints to use
+## Action blueprints to use
 
 - **Prep** — Build a focused agenda before each meeting, including goals, time blocks, and pre-reads.
 - **Debrief** — Immediately after a meeting, extract decisions, action items, and open questions into a structured note.

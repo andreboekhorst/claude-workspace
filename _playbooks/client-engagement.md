@@ -20,7 +20,7 @@ consistent, and clients informed without the manual overhead.
 - Project context gets lost between meetings, causing repeat conversations.
 
 
-## Workflow blueprints to use
+## Action blueprints to use
 
 - **Draft** — Write proposals, deliverables, and client-facing documents.
 - **Plan** — Break projects into phases, milestones, and task lists.

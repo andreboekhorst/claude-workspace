@@ -20,7 +20,7 @@ focused, your sources tracked, and your conclusions grounded.
 - Insights stay locked in the researcher's head instead of becoming shareable artifacts.
 
 
-## Workflow blueprints to use
+## Action blueprints to use
 
 - **Research** — Gather and organize sources around specific questions.
 - **Synthesize** — Connect findings across sources to surface patterns and themes.

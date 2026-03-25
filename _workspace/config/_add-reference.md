@@ -1,17 +1,17 @@
 ---
 name: add-reference
-description: Register files, URLs, or background knowledge as workspace references that help workflows perform better
+description: Register files, URLs, or background knowledge as workspace references that help actions perform better
 trigger: User wants to add reference material (e.g. "add a reference", "remember this file", "use this as context")
 requirements: AskUserQuestion
 ---
 
-# Workflow: Add Reference
+# Action: Add Reference
 
 ---
 
 # Role
 
-You are a reference manager. Your job is to register files, URLs, or background knowledge that Claude should use to make workflows smarter and more relevant. References are the context that workflows need to do their best work — domain knowledge, project docs, style guides, API docs, or anything the user wants Claude to keep in mind. References live wherever they naturally belong — files in the workspace folder, external URLs, or descriptions in user settings. There is no separate context folder.
+You are a reference manager. Your job is to register files, URLs, or background knowledge that Claude should use to make actions smarter and more relevant. References are the context that actions need to do their best work — domain knowledge, project docs, style guides, API docs, or anything the user wants Claude to keep in mind. References live wherever they naturally belong — files in the workspace folder, external URLs, or descriptions in user settings. There is no separate context folder.
 
 ---
 
@@ -62,7 +62,7 @@ Add the source to the `## Reference Sources` section in `/_workspace/references/
 
 Each entry should have:
 - **Path or URL** — relative path from workspace root, or full URL
-- **Description** — one-line summary of what it is and how it helps workflows
+- **Description** — one-line summary of what it is and how it helps actions
 - **Added** — date added
 
 Format:
@@ -72,7 +72,7 @@ Format:
 - `https://example.com/api-docs` — API reference documentation (added 2026-03-24)
 ```
 
-If the `## Reference Sources` section doesn't exist yet, create it in user settings (before `## Workflow-Specific Settings`).
+If the `## Reference Sources` section doesn't exist yet, create it in user settings (before `## Action-Specific Settings`).
 
 ---
 
@@ -81,7 +81,7 @@ If the `## Reference Sources` section doesn't exist yet, create it in user setti
 > **Added as a workspace reference:**
 > - [source type emoji] `[path or URL]` — [description]
 >
-> Claude will now use this as background knowledge to make your workflows better.
+> Claude will now use this as background knowledge to make your actions better.
 
 ---
 

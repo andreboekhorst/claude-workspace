@@ -16,7 +16,7 @@ A workspace for running marketing or communications campaigns from concept throu
 - Results are not tracked or reviewed — campaigns end and the team moves on without capturing what worked, what failed, and why.
 - Audience targeting is vague — campaigns go out to "everyone" instead of being tailored to specific segments with specific needs.
 
-## Workflow blueprints to use
+## Action blueprints to use
 
 - **Plan** — Define campaign objectives, timeline, channels, audience segments, and success metrics before any creative work begins.
 - **Draft** — Write campaign copy for each channel, ensuring messaging stays consistent with the central campaign brief.

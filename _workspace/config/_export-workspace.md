@@ -5,7 +5,7 @@ trigger: User wants to export, share, or package the workspace (e.g. "export my 
 requirements: Bash (zip command)
 ---
 
-# Workflow: Export Workspace
+# Action: Export Workspace
 
 You help the user export their workspace as a zip file. The user chooses between a **clean template** (shareable, no personal data) or a **full export** (personal backup with everything).
 
@@ -24,7 +24,7 @@ Ask the user using `AskUserQuestion`:
 
 > **How would you like to export?**
 >
-> 1. **Clean template** — A reusable workspace others can clone. Strips all personal data (logs, context files). Keeps workflows, config, and structure.
+> 1. **Clean template** — A reusable workspace others can clone. Strips all personal data (logs, context files). Keeps actions, config, and structure.
 > 2. **Full export** — A personal backup with everything included.
 
 **If clean template:** follow up with a second `AskUserQuestion`:
@@ -81,7 +81,7 @@ For **full exports**: warn about sensitive files but include them unless the use
 - `LICENSE` (if exists)
 - `_assets/` (full folder)
 - `_workspace/config/` (all config files)
-- `_workspace/workflows/` (all workflow files)
+- `_workspace/actions/` (all action files)
 - `_workspace/references/` (include by default — these define the workspace personality and are useful as starting templates; but strip or generalize personal details like name/role if present)
 - `.gitignore`
 
@@ -117,7 +117,7 @@ For **full exports**: warn about sensitive files but include them unless the use
   - **Detail level:**
   - **Tone:**
 
-  ## Workflow-Specific Settings
+  ## Action-Specific Settings
   ```
   ...and so on for all sections. The new user will fill these in during their own setup.
 
@@ -131,7 +131,7 @@ Generate a `README.md` tailored to the exported workspace. Use this structure:
 
 ## What is this?
 
-This is a **Claude Workspace** — a structured folder of workflows, references, and templates that Claude uses to assist you. Open this folder in your editor with Claude Code, and Claude knows how to help.
+This is a **Claude Workspace** — a structured folder of actions, references, and templates that Claude uses to assist you. Open this folder in your editor with Claude Code, and Claude knows how to help.
 
 ## Getting started
 
@@ -140,11 +140,11 @@ This is a **Claude Workspace** — a structured folder of workflows, references,
 3. Say **"set up my space"** — Claude will walk you through a short configuration
 4. You're ready to go!
 
-## Workflows
+## Actions
 
-| Workflow | What it does | Try saying... |
-|----------|-------------|---------------|
-[For each workflow in _workspace/workflows/, add a row with name, description from frontmatter, and trigger example]
+| Action | What it does | Try saying... |
+|--------|-------------|---------------|
+[For each action in _workspace/actions/, add a row with name, description from frontmatter, and trigger example]
 
 ## Requirements
 
@@ -154,13 +154,13 @@ This is a **Claude Workspace** — a structured folder of workflows, references,
 
 | Folder | Purpose |
 |--------|---------|
-| `_workspace/config/` | System workflows (don't edit) |
-| `_workspace/workflows/` | User-facing workflows |
+| `_workspace/config/` | System actions (don't edit) |
+| `_workspace/actions/` | User-facing actions |
 | `_workspace/references/` | References and user settings (filled during setup) |
 | `_workspace/logs/` | Session logs |
 ```
 
-Populate the workflows table by reading the frontmatter (`name`, `description`, `trigger`) from each file in `_workspace/workflows/`. Only include user workflows, not system config workflows.
+Populate the actions table by reading the frontmatter (`name`, `description`, `trigger`) from each file in `_workspace/actions/`. Only include user actions, not system config actions.
 
 ## Full export
 

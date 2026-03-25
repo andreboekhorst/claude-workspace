@@ -16,7 +16,7 @@ A workspace for teams and solo creators who need to move content from idea to pu
 - Editing is a bottleneck — everything funnels through one person or one vague "make it better" pass, slowing the whole pipeline.
 - Repurposing never happens — published content sits idle instead of being adapted for other formats or channels.
 
-## Workflow blueprints to use
+## Action blueprints to use
 
 - **Plan Content** — Build and maintain an editorial calendar so you always know what is coming next and when.
 - **Draft** — Generate first drafts from outlines, briefs, or raw ideas so the blank-page problem disappears.

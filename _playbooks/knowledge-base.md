@@ -16,7 +16,7 @@ A workspace for teams drowning in undocumented knowledge. This playbook turns tr
 - There is no review process — documents are written once and never revisited, so errors and gaps accumulate silently.
 - New documentation has no standard — every author uses a different format, level of detail, and structure, making the collection incoherent.
 
-## Workflow blueprints to use
+## Action blueprints to use
 
 - **Document** — Write new documentation from scratch following a consistent template and structure.
 - **Edit** — Revise existing documents for accuracy, clarity, and completeness during scheduled review cycles.

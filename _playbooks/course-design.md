@@ -20,7 +20,7 @@ assessments. Produces a complete, teachable course package.
 - Course iteration is hard because there is no single view of the full curriculum.
 
 
-## Workflow blueprints to use
+## Action blueprints to use
 
 - **Teach** — Structure explanations for clarity, building from simple to complex.
 - **Plan** — Map the full course arc — modules, lessons, dependencies, timing.

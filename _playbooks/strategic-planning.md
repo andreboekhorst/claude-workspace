@@ -18,7 +18,7 @@ A workspace for leaders and teams navigating high-level direction-setting. This 
 - Context and rationale behind past strategic decisions are lost over time
 
 
-## Workflow blueprints to use
+## Action blueprints to use
 
 - **Research** — Gather market intelligence, internal data, and environmental signals
 - **Plan** — Translate strategic intent into concrete initiatives with milestones

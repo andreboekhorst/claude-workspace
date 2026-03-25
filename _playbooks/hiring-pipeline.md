@@ -16,7 +16,7 @@ A workspace for managing the end-to-end hiring process for one or more open role
 - Candidate experience suffers because communication is slow, feedback loops are long, and the process feels disorganized.
 - Hiring decisions are made on gut feeling rather than structured evaluation against defined competencies.
 
-## Workflow blueprints to use
+## Action blueprints to use
 
 - **Draft** — Write clear, specific job descriptions that accurately reflect the role and attract the right candidates.
 - **Design Form** — Build structured screening rubrics and scorecards so every candidate is evaluated on the same criteria.

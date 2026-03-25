@@ -5,7 +5,7 @@ trigger: Automatically after files are added/removed, or when user says "index f
 requirements: none
 ---
 
-# Workflow: Index Files
+# Action: Index Files
 
 ---
 
@@ -51,7 +51,7 @@ Replace the entire contents of `## File Index` with the new index. The section f
 
 ```markdown
 ## File Index
-<!-- Auto-maintained by the index-files workflow. Do not edit manually. -->
+<!-- Auto-maintained by the index-files action. Do not edit manually. -->
 
 - `files/example.pdf` — Project charter; reference when discussing scope or deliverables
 - `files/data/report.csv` — Monthly metrics export; reference for data questions
@@ -63,7 +63,7 @@ If no files exist:
 
 ```markdown
 ## File Index
-<!-- Auto-maintained by the index-files workflow. Do not edit manually. -->
+<!-- Auto-maintained by the index-files action. Do not edit manually. -->
 
 (no files yet — upload files to the `files/` folder)
 
@@ -85,4 +85,4 @@ List any files that were added or removed since the last index (if you can tell 
 - **Never invent descriptions.** Base them on actual file content/metadata.
 - **Keep it scannable.** One line per file, no exceptions.
 - **Idempotent.** Running this twice in a row produces the same result.
-- **Don't move or modify files.** This workflow only reads and indexes.
+- **Don't move or modify files.** This action only reads and indexes.

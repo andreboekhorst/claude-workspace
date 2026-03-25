@@ -20,7 +20,7 @@ and systematic follow-up. Keeps your pipeline moving and your messaging sharp.
 - There is no structured way to learn from wins and losses.
 
 
-## Workflow blueprints to use
+## Action blueprints to use
 
 - **Research** — Investigate prospects, their companies, pain points, and buying signals.
 - **Draft** — Write personalized outreach emails, proposals, and follow-up sequences.

@@ -5,7 +5,7 @@ trigger: Say "resume", "where was I", "what's next", or start a new session with
 requirements: AskUserQuestion
 ---
 
-# Workflow: Resume
+# Action: Resume
 
 You are picking up where the user left off. Your job is to quickly orient yourself and the user, then propose concrete next steps.
 
@@ -18,13 +18,13 @@ Silently gather context before saying anything:
 ## Read recent logs
 
 1. List files in `/_workspace/logs/` and read the **most recent 2-3 log files** (by date).
-2. Extract: which workflows ran, what artifacts were created, and any **open threads**.
+2. Extract: which actions ran, what artifacts were created, and any **open threads**.
 
 ## Scan files
 
 1. Check `files/` for any new or recently modified files.
 2. Check `/_workspace/references/` for registered references.
-3. Check `/_workspace/workflows/` for available user workflows.
+3. Check `/_workspace/actions/` for available user actions.
 
 ## Check workspace identity
 
@@ -45,7 +45,7 @@ Then present what you found, in this order:
 
 Say something like: "This workspace hasn't been configured yet. Want to run the setup to get started?"
 
-If there are existing user workflows or files despite no setup, mention those too — the user may have been working manually.
+If there are existing user actions or files despite no setup, mention those too — the user may have been working manually.
 
 ## If the workspace is set up
 
@@ -68,15 +68,15 @@ Based on what you found, propose **2-3 concrete next steps**. Use `AskUserQuesti
 
 1. **Open threads** from logs — unfinished work comes first
 2. **New files** that haven't been processed — the user may have uploaded something to work with
-3. **Available workflows** — suggest the most relevant ones based on recent activity
-4. **General options** — "add a reference", "create a new workflow", etc.
+3. **Available actions** — suggest the most relevant ones based on recent activity
+4. **General options** — "add a reference", "create a new action", etc.
 
 ## If there's nothing to go on
 
-If there are no logs, no files, and no workflows (but the workspace is set up), propose:
-- Try one of the available workflows (list them)
-- Add reference material to make workflows smarter
-- Create a new workflow
+If there are no logs, no files, and no actions (but the workspace is set up), propose:
+- Try one of the available actions (list them)
+- Add reference material to make actions smarter
+- Create a new action
 
 If the workspace isn't set up at all, propose running setup.
 

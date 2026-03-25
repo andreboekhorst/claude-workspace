@@ -16,7 +16,7 @@ A workspace for organizing events from initial concept through post-event wrap-u
 - Post-event follow-up doesn't happen, so feedback isn't collected, attendees aren't thanked, and learnings are lost.
 - Repeat events start from scratch each time instead of building on what worked before.
 
-## Workflow blueprints to use
+## Action blueprints to use
 
 - **Plan** — Create the event master plan covering timeline, budget, venue, attendees, and success criteria.
 - **Checklist** — Build countdown checklists for pre-event logistics, day-of operations, and post-event tasks.

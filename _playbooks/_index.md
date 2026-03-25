@@ -1,6 +1,6 @@
 # Playbook Index
 
-Curated workspace bundles for specific projects and goals. Each playbook defines which workflow blueprints to use, what tools are needed, and how to structure the workspace. Used during setup — removable after.
+Curated workspace bundles for specific projects and goals. Each playbook defines which action blueprints to use, what tools are needed, and how to structure the workspace. Used during setup — removable after.
 
 ## Product & Strategy
 | Playbook | File | Description |
