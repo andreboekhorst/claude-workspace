@@ -1,17 +1,17 @@
 ![Header](_assets/header.jpg)
 
-## STEP 1 -> USe a template or setup your own!! Strong
-## I actually think the template should NOT be in config. 
-## since its basically not part of the spec. 
+# 🐚 Workspace Designer 
+With workspace designer you have project-bound actions like in Claude Code, without needing to write any code or prompts yourself! 
+- 🔄 Self writing skills - Add and improve any of your skills
+- 🧙🏽‍♂️ Setup Wizard — An initial workflow will ask for user settings and check dependencies
+- 🏗️ Flexible blueprint — You can use this blueprint for any set of tasks
+- 📚 References — Background knowledge and context that helps workflows perform better
+- 🔄 Reusable workflows — Define once, use across sessions and workspaces
+- 🧠 Logging — References and settings persist between sessions
+- 📦 Progressive disclosure — Only loads instructions when needed
+- ✏️ No code required — Just markdown files and folders
 
-# 🐚 Claude Workspace
 
-A **Workspace** is a structured folder that turns Claude into a domain-specific assistant. It works with Claude Cowork — open a folder, and Claude follows the instructions inside.
-
-This repository contains two things:
-
-1. **The Workspace Protocol** — a spec for how any workspace should be structured so Claude can understand and operate it
-2. **The Workspace Designer** — a starter template that implements the protocol, with built-in actions to help you build and customize your own workspace
 
 ---
 
@@ -21,9 +21,7 @@ This repository contains two things:
 
 ---
 
-
 ## 🚀 Getting Started
-
 1. Download [this workspace](https://github.com/andreboekhorst/claude-workspace/archive/refs/heads/main.zip)
 2. Unzip the file
 3. Open Claude Desktop, go to Claude Cowork
@@ -32,15 +30,39 @@ This repository contains two things:
 6. Say hi! A setup wizard will walk you through configuration.
 
 
+
+## Workspace Agent Wizard
+When you open your emtpy project folder, all you need to do is say Hi. Then a setup wizard will guide you through creating a workspace exactly cathered for your needs. After this, you can continuously update your workspace functionalities. 
+
+## Exporting and reusing
+When you are happy with your workspace, you can export and re-use your workspace for others to use. Just ask to export the project. It will strip any personal files from the project and create a zip file. 
+
+
+
+
+# How does it work?
+Claude Cowork is basically Claude Code under the hood. That means it can write it's own prompts! With this in mind we created a framework for a workspace that contains a defined structure, and a set of configurations, actions, logs and references. When you run an empty project for the first time, it will use these predefined configurations to help you set up a workspace and set up actions. 
+
+### Progressive disclosure
+Another technique that the workspace designer implements is progressive disclosure. This means that whenever you add new actions to your workflow, it does not just add it to the prompt. In the main entry file (CLAUDE.md) we list all of the actions that are available with a reference to the full instructions. 
+
+## Working with skills and connectors. 
+There are no limits. 
+
+## Next Steps
+I believe that using llms as a package will be the future of using claude, and this is a first step to reaching that. But there is still a lot of opportunities. We have now limited ourselves to writing our own prompts, but why not create your own bash files?
+
+## Security
+Always be wary about the code (or prompts) that you are using on your computer! you can check this folder as it is all in markdown files in this project.
+
+---
 ---
 
-
-# Part 1: The Workspace Protocol
-
+# The  Framework
 The Workspace Protocol defines how a folder must be structured so Claude can discover actions, load instructions on demand, and operate as a domain-specific assistant. Any workspace — whether built by hand or generated — should follow this spec.
 
 
-## Core Concepts
+### Core Concepts
 
 - **CLAUDE.md as entry point** — Claude reads this file upfront. It contains just enough to identify user intent and route to the right action file.
 - **Progressive disclosure** — Full action instructions live in separate files and are loaded on-demand. This keeps the initial context small and focused.
@@ -48,7 +70,7 @@ The Workspace Protocol defines how a folder must be structured so Claude can dis
 - **References** — Background knowledge, user settings, and context that help actions perform better.
 
 
-## Folder Structure
+### Folder Structure
 
 Every workspace that follows the protocol looks like this:
 
@@ -75,11 +97,11 @@ Rules:
 - All user data folders must be gitignored
 
 
-## CLAUDE.md Spec
+### CLAUDE.md Spec
 
 The entry point. Claude reads this upfront and uses it to route user intent to action files. It must contain these sections, in order:
 
-### Header
+#### Header
 
 ```markdown
 # [Workspace Title]
@@ -89,7 +111,7 @@ The entry point. Claude reads this upfront and uses it to route user intent to a
 - Author: [who made it]
 ```
 
-### Requirements
+#### Requirements
 
 What the workspace needs. Two levels:
 
