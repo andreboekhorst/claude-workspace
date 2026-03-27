@@ -1,65 +1,66 @@
 ---
 name: event-planning
-type: playbook
-description: Plan and execute events end-to-end — logistics, agenda, speakers, and post-event follow-up.
+description: Plan and execute events — logistics, agenda, speakers, and follow-up.
 parameters:
   - event_type: What kind of event — conference, workshop, offsite, meetup?
   - expected_size: Roughly how many attendees?
-references:
-  - upload: Past event retro, attendee feedback, or venue details
 ---
 
-# Event Planning (event_type, expected_size)
+# Event Planning
 
-A workspace for organizing events from initial concept through post-event wrap-up. Whether it's a team offsite, a conference, a workshop, or a company all-hands, this keeps every moving piece tracked and coordinated.
+**Follow-up:** What's the event, and roughly how big?
 
-## Follow-up question
-What's the event, and roughly how big?
+## Skills
 
-## Core problems this workspace solves
+### Plan
+Build the event master plan with timeline, budget, and goals.
+1. Clarify the event goal and constraints
+2. Define measurable success criteria
+3. Break into milestones with timing
+4. List first actions for each milestone
 
-- Logistics are scattered across emails, messages, and spreadsheets with no single source of truth.
-- The agenda gets built at the last minute, leading to rushed content and misaligned expectations with speakers.
-- Speaker coordination is messy — confirmations, bios, AV requirements, and scheduling happen in too many places.
-- Post-event follow-up doesn't happen, so feedback isn't collected, attendees aren't thanked, and learnings are lost.
-- Repeat events start from scratch each time instead of building on what worked before.
+In: event concept, constraints | Out: event master plan → `files/events/`
 
-## Skill blueprints to use
+### Checklist
+Create countdown checklists for pre-event, day-of, and post-event.
+1. Map the process end-to-end
+2. Break into discrete, actionable steps
+3. Add quality checks at critical points
+4. Group into logical sections
 
-- **Plan** — Create the event master plan covering timeline, budget, venue, attendees, and success criteria.
-- **Checklist** — Build countdown checklists for pre-event logistics, day-of operations, and post-event tasks.
-- **Prep** — Prepare speaker briefs, session outlines, and facilitation guides for each agenda block.
-- **Draft** — Write event communications: invitations, reminders, speaker outreach, and attendee follow-ups.
-- **Debrief** — Capture what went well, what didn't, attendee feedback, and recommendations for next time.
+In: event plan, failure points | Out: countdown checklist → `files/logistics/`
 
-## Skill outputs
+### Prep
+Build speaker briefs, session outlines, or facilitation guides.
+1. Clarify session purpose and attendees
+2. Draft time-boxed agenda items
+3. Prepare talking points per item
+4. Gather background material
 
-| Skill | Output | Format | Folder |
-|--------|--------|--------|--------|
-| Plan | Event master plan with timeline, budget, and attendees | Markdown | `files/events/` |
-| Checklist | Countdown checklist for pre-event, day-of, and post-event | Markdown | `files/logistics/` |
-| Prep | Speaker brief, session outline, or facilitation guide | Markdown | `files/events/` |
-| Draft | Invitation, reminder, or follow-up communication | Markdown | `files/follow-up/` |
-| Debrief | Post-event review with feedback and recommendations | Markdown | `files/follow-up/` |
+In: session context, speakers | Out: session prep doc → `files/events/`
 
-## Required tools & skills
+### Draft
+Write invitations, reminders, or follow-up communications.
+1. Clarify purpose, audience, and format
+2. Outline key points
+3. Draft full piece
+4. Review for tone and clarity
 
-- **Google Calendar** — For scheduling event dates, speaker slots, rehearsals, and coordination meetings.
-- **File management** — Reading and writing markdown files for plans, checklists, and communications.
+In: brief, audience | Out: event communication → `files/follow-up/`
 
-## Useful references
+### Debrief
+Process post-event feedback into structured lessons and actions.
+1. Read raw notes and feedback in full
+2. Extract decisions and action items
+3. Identify open questions
+4. Format into structured review
 
-- Venue details, contracts, and contact information
-- Speaker bios, topics, and technical requirements
-- Past event retrospectives and attendee feedback
-- Budget templates and vendor lists
-- Communication templates for invitations, confirmations, and follow-ups
+In: event notes, feedback | Out: post-event review → `files/follow-up/`
 
-## Folder structure
+## Tools
+- **Google Calendar** — schedule event dates, speaker slots, and coordination meetings
 
-```
-files/
-  events/        # Master plans, agendas, and speaker information per event
-  logistics/     # Venue details, vendor contacts, budgets, and AV requirements
-  follow-up/     # Post-event surveys, debrief notes, and thank-you communications
-```
+## Folders
+- `files/events/` — master plans, agendas, speaker information
+- `files/logistics/` — venue details, vendor contacts, budgets, AV requirements
+- `files/follow-up/` — surveys, debrief notes, thank-you communications

@@ -1,70 +1,66 @@
 ---
 name: data-analysis
-type: playbook
 description: Collect data, find patterns, and present insights that drive decisions.
 parameters:
-  - data_domain: What domain is the data from — sales, operations, user behavior?
+  - data_domain: What domain — sales, operations, user behavior?
   - key_question: What's the main question you're trying to answer?
-references:
-  - upload: The raw dataset or data dictionary
 ---
 
-# Data Analysis (data_domain, key_question)
+# Data Analysis
 
-A workspace for turning raw data into clear insights. Covers the full arc
-from data collection and cleaning through pattern recognition, visualization,
-and narrative reporting.
+**Follow-up:** What data are you working with, and what are you trying to find out?
 
+## Skills
 
-## Follow-up question
-What data are you working with, and what are you trying to find out?
+### Research
+Gather domain context and background for the analysis.
+1. Define the question and scope
+2. Collect information from sources
+3. Organize findings into themes
+4. Deliver summary with gaps flagged
 
-## Core problems this workspace solves
+In: topic, constraints | Out: domain context summary → `files/analysis/`
 
-- Data lives in scattered files and formats with no single source of truth.
-- Analysis is ad hoc — one-off scripts, no repeatable process.
-- Insights get buried in spreadsheets where nobody reads them.
-- There is no storytelling around findings, so stakeholders miss the point.
-- Past analyses are not documented, leading to duplicate work.
+### Synthesize
+Combine data from multiple sources into coherent patterns.
+1. Identify all inputs (files, references, prior work)
+2. Extract key data points from each source
+3. Cluster into themes and cross-reference
+4. Write thematic summary with attribution
 
+In: multiple sources (CSVs, spreadsheets, images of charts, PDFs) | Out: pattern analysis → `files/analysis/`
 
-## Skill blueprints to use
+### Summarize
+Produce executive-level takeaways from detailed analysis.
+1. Read the full analysis
+2. Extract core findings and decisions
+3. Structure into a scannable format
+4. Calibrate to target length
 
-- **Research** — Understand the domain and context before diving into data.
-- **Synthesize** — Combine data from multiple sources and identify patterns.
-- **Summarize** — Condense complex analysis into executive-level takeaways.
-- **Explain** — Break down technical findings for non-technical audiences.
-- **Draft** — Produce polished reports with narrative, charts, and recommendations.
+In: analysis output | Out: executive summary → `files/reports/`
 
+### Explain
+Translate technical findings for a non-technical audience.
+1. Clarify topic and audience
+2. Identify core concepts and misconceptions
+3. Choose analogies that bridge understanding
+4. Build explanation layer by layer
 
-## Skill outputs
+In: findings, audience | Out: accessible breakdown → `files/reports/`
 
-| Skill | Output | Format | Folder |
-|--------|--------|--------|--------|
-| Research | Domain context and background summary | Markdown | `files/analysis/` |
-| Synthesize | Combined data patterns and identified trends | Markdown | `files/analysis/` |
-| Summarize | Executive-level takeaways | Markdown | `files/reports/` |
-| Explain | Non-technical breakdown of findings | Markdown | `files/reports/` |
-| Draft | Polished report with narrative and recommendations | Markdown | `files/reports/` |
+### Draft
+Write a polished report with narrative and recommendations.
+1. Clarify purpose, audience, and format
+2. Outline sections and key points
+3. Draft full report
+4. Review for coherence and completeness
 
-## Required tools & skills
+In: analysis, audience | Out: final report → `files/reports/`
 
-- **Bash** — Run data processing scripts, transformations, and quick calculations.
+## Tools
+- **Bash** — run data processing scripts and calculations
 
-
-## Useful references
-
-- Data dictionaries describing fields, types, and relationships.
-- Analysis frameworks or methodologies relevant to your domain.
-- Past reports or dashboards for consistency and comparison.
-- Statistical reference guides for choosing the right methods.
-
-
-## Folder structure
-
-```
-files/
-  data/        # Raw and cleaned datasets — CSVs, exports, database dumps
-  analysis/    # Scripts, notebooks, intermediate calculations
-  reports/     # Final deliverables — written reports, chart exports, slide decks
-```
+## Folders
+- `files/data/` — raw datasets, CSVs, spreadsheets, screenshot exports
+- `files/analysis/` — scripts, notebooks, intermediate calculations
+- `files/reports/` — final reports, chart exports, slide decks

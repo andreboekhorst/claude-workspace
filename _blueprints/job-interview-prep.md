@@ -1,66 +1,67 @@
 ---
 name: job-interview-prep
-type: playbook
-description: Prepare thoroughly for job interviews — research the company, anticipate questions, practice answers, and debrief afterward.
+description: Prepare for job interviews — research the company, practice answers, debrief afterward.
 parameters:
   - target_role: What role are you interviewing for?
   - company: Which company?
-references:
-  - search: Company background — mission, culture, recent news, and key people
 ---
 
-# Job Interview Prep (target_role, company)
+# Job Interview Prep
 
-A workspace for preparing for job interviews from start to finish. From researching the company and role through practicing your answers to debriefing after the interview.
+**Follow-up:** What role are you interviewing for?
 
-## Follow-up question
-What role are you interviewing for?
+## Skills
 
-## Core problems this workspace solves
+### Research
+Build a company and role briefing document.
+1. Define what to research (company, role, interviewers)
+2. Gather information from sources
+3. Organize into themes (culture, product, challenges)
+4. Flag gaps and key talking points
 
-- Candidates walk into interviews without understanding what the company actually does or cares about, leading to generic answers that don't land.
-- Interview questions feel surprising because candidates haven't thought through what's likely to be asked for this specific role.
-- Answers ramble or miss the point because they weren't structured or practiced beforehand.
-- Candidates forget to ask their own questions, or ask surface-level ones that don't demonstrate genuine interest.
-- After the interview, valuable lessons are lost because there's no structured reflection on what went well and what didn't.
+In: company, role | Out: company briefing → `files/interviews/`
 
-## Skill blueprints to use
+### Anticipate
+Generate likely questions and draft structured answers.
+1. Identify the role context and interview format
+2. Brainstorm likely questions from the interviewer's perspective
+3. Categorize by theme and draft answers
+4. Flag weak spots with strategies
+5. Prepare for follow-up probes
 
-- **Research** — Investigate the company, role, team, and interviewers to build a solid knowledge base before the interview.
-- **Anticipate** — Generate likely interview questions based on the role, company, and format, then draft strong answers.
-- **Prep** — Prepare your own questions to ask the interviewer that demonstrate insight and genuine curiosity.
-- **Brainstorm** — Generate and refine compelling stories from your experience that map to key competencies.
-- **Debrief** — Reflect on the interview afterward to capture lessons, flag follow-up actions, and improve for next time.
+In: role, company research | Out: Q&A prep document → `files/interviews/`
 
-## Skill outputs
+### Prep
+Prepare your own questions for the interviewer.
+1. Review company research and role details
+2. Draft questions that demonstrate genuine interest
+3. Prioritize by what matters most to you
+4. Prepare follow-up angles
 
-| Skill | Output | Format | Folder |
-|--------|--------|--------|--------|
-| Research | Company & role briefing document | Markdown | `files/interviews/` |
-| Anticipate | List of likely questions with draft answers | Markdown | `files/interviews/` |
-| Prep | Your questions for the interviewer | Markdown | `files/interviews/` |
-| Brainstorm | STAR-format stories mapped to competencies | Markdown | `files/stories/` |
-| Debrief | Post-interview reflection with lessons and follow-ups | Markdown | `files/interviews/` |
+In: company briefing, priorities | Out: interviewer questions → `files/interviews/`
 
-## Required tools & skills
+### Brainstorm
+Map your STAR-format stories to competencies.
+1. Clarify the competencies being assessed
+2. Generate story candidates from your experience
+3. Cluster by competency and pick strongest
+4. Structure each as Situation-Task-Action-Result
 
-- **WebSearch / WebFetch** — For researching companies, roles, interviewers, and industry context.
-- **File management** — Reading and writing markdown files for research notes, question prep, and debrief documents.
+In: competencies, experience | Out: STAR stories → `files/stories/`
 
-## Useful references
+### Debrief
+Reflect on the interview and capture lessons.
+1. Record raw impressions while fresh
+2. Extract what went well and what didn't
+3. Identify action items for next rounds
+4. Format into structured reflection
 
-- The job description or posting for the role
-- Your resume or CV
-- Company website, recent news, and press releases
-- LinkedIn profiles of interviewers (if known)
-- Notes from recruiter calls or previous interview rounds
-- Your own career stories organized by competency (leadership, problem-solving, collaboration, etc.)
+In: interview notes, impressions | Out: post-interview reflection → `files/interviews/`
 
-## Folder structure
+## Tools
+- **WebSearch** — research companies, roles, and interviewers
 
-```
-files/
-  interviews/        # One subfolder per company or role
-  stories/           # Your reusable STAR-format stories organized by competency
-  templates/         # Question banks, answer frameworks, and cheat sheets
-```
+## Folders
+- `files/interviews/` — briefings, Q&A prep, reflections (subfolder per company)
+- `files/stories/` — reusable STAR stories organized by competency
+- `files/templates/` — question banks, answer frameworks, cheat sheets

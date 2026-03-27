@@ -1,62 +1,66 @@
 ---
 name: community-building
-type: playbook
-description: Grow and engage a community through systematic content, feedback loops, and outreach.
+description: Grow and engage a community through content, feedback loops, and outreach.
 parameters:
   - community_topic: What is the community about?
-  - platform: Where does it live — Discord, Slack, a forum, social media?
-references:
-  - search: The top 3 communities in the same space — what they do and how they engage
+  - platform: Where does it live — Discord, Slack, forum, social media?
 ---
 
-# Community Building (community_topic, platform)
+# Community Building
 
-A workspace for community managers and team leads who need to keep a community healthy and growing. This playbook replaces reactive community management with a structured approach to engagement, content, feedback collection, and growth strategy.
+**Follow-up:** What's the community about, and where does it live?
 
-## Follow-up question
-What's the community about, and where does it live?
+## Skills
 
-## Core problems this workspace solves
+### Scan
+Survey community channels for emerging patterns and sentiment.
+1. Define the space to scan
+2. Search broadly across discussions and content
+3. Cluster signals by theme and strength
+4. Highlight trends and notable outliers
 
-- Engagement is declining — fewer people participate in discussions, events, or content, and you are not sure why.
-- There is no systematic feedback collection — member opinions arrive randomly through scattered channels and never get synthesized.
-- Content is not resonating — posts and updates get low interaction because they are not grounded in what the community actually cares about.
-- Growth has stalled — new member acquisition has flatlined and there is no clear strategy to restart it.
-- Patterns go unnoticed — recurring complaints, popular topics, and emerging leaders are invisible without deliberate scanning.
+In: community channels, time window | Out: sentiment report → `files/feedback/`
 
-## Skill blueprints to use
+### Research
+Analyze best practices and competitor communities.
+1. Define the question and scope
+2. Gather information from sources
+3. Organize findings into themes
+4. Deliver summary with sources cited
 
-- **Scan** — Monitor community channels for emerging themes, sentiment shifts, and conversations that need attention.
-- **Research** — Investigate what similar communities are doing, identify growth tactics, and study engagement patterns.
-- **Draft** — Create community posts, announcements, event descriptions, and outreach messages grounded in member interests.
-- **Plan Content** — Build a community content calendar that balances announcements, discussions, and member spotlights.
-- **Debrief** — Review events, campaigns, or time periods to extract lessons and adjust the community strategy.
+In: topic, constraints | Out: community analysis → `files/reports/`
 
-## Skill outputs
+### Draft
+Write community posts, announcements, or outreach messages.
+1. Clarify purpose, audience, and format
+2. Outline key points
+3. Draft full piece
+4. Review for tone and clarity
 
-| Skill | Output | Format | Folder |
-|--------|--------|--------|--------|
-| Scan | Themes and sentiment report from community channels | Markdown | `files/feedback/` |
-| Research | Best practices and competitor community analysis | Markdown | `files/reports/` |
-| Draft | Community post, announcement, or outreach message | Markdown | `files/content/` |
-| Plan Content | Community content calendar | Markdown | `files/content/` |
-| Debrief | Event or campaign review with lessons learned | Markdown | `files/reports/` |
+In: brief, audience | Out: community post → `files/content/`
 
-## Required tools & skills
+### Plan Content
+Build a content calendar for community engagement.
+1. Define content goals and audience
+2. Brainstorm topics aligned with goals
+3. Sequence and assign target dates
+4. Choose format for each piece
 
-- **WebSearch** — Research community management best practices, competitor communities, and relevant industry trends.
+In: goals, time frame, constraints | Out: content calendar → `files/content/`
 
-## Useful references
+### Debrief
+Process event or campaign notes into decisions and actions.
+1. Read raw notes in full
+2. Extract decisions and action items
+3. Identify open questions
+4. Format into structured debrief
 
-- **Community guidelines** — The rules and values that define how members interact, used to maintain a healthy environment.
-- **Member feedback** — Collected survey responses, forum threads, and direct messages that reveal what members want and need.
-- **Engagement metrics** — Historical data on participation rates, growth numbers, and content performance to track progress.
+In: raw notes, event context | Out: event review → `files/reports/`
 
-## Folder structure
+## Tools
+- **WebSearch** — research community best practices and competitor communities
 
-```
-files/
-  content/      # Community posts, announcements, and event materials
-  feedback/     # Survey results, compiled feedback, and sentiment summaries
-  reports/      # Growth reports, engagement analyses, and strategy documents
-```
+## Folders
+- `files/content/` — posts, announcements, event materials
+- `files/feedback/` — survey results, sentiment summaries
+- `files/reports/` — growth reports, engagement analyses, strategy docs

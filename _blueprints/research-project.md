@@ -1,71 +1,67 @@
 ---
 name: research-project
-type: playbook
 description: Systematic investigation with structured findings and actionable conclusions.
 parameters:
   - research_question: What are you trying to find out?
-  - deliverable_type: What's the end product — a report, a presentation, a recommendation?
-references:
-  - search: Existing literature, studies, or key reports on the research question
+  - deliverable_type: What's the end product — report, presentation, recommendation?
 ---
 
-# Research Project (research_question, deliverable_type)
+# Research Project
 
-A workspace for running structured research — from initial questions through
-source gathering, analysis, and final write-up. Keeps your investigation
-focused, your sources tracked, and your conclusions grounded.
+**Follow-up:** What are you researching?
 
+## Skills
 
-## Follow-up question
-What are you researching?
+### Research
+Deep dive into a topic with structured source gathering.
+1. Define the question, constraints, and depth
+2. Collect information from sources
+3. Organize findings into themes
+4. Deliver summary with sources cited and gaps flagged
 
-## Core problems this workspace solves
+In: research question, constraints | Out: organized source notes → `files/notes/`
 
-- Research meanders without a clear question or scope, wasting time on tangents.
-- Findings accumulate in random notes with no structure to connect them.
-- Sources are not tracked, making claims hard to verify or revisit later.
-- Raw research never gets distilled into actionable conclusions or recommendations.
-- Insights stay locked in the researcher's head instead of becoming shareable artifacts.
+### Synthesize
+Combine findings from multiple sources into coherent themes.
+1. Collect all inputs (files, references, prior research)
+2. Extract key points from each source
+3. Cluster into themes and cross-reference
+4. Write thematic summary with attribution
 
+In: multiple sources (PDFs, images, CSVs, notes) | Out: cross-source patterns → `files/findings/`
 
-## Skill blueprints to use
+### Verify
+Fact-check claims against authoritative sources.
+1. Extract each distinct claim to check
+2. Search for confirming or denying sources
+3. Rate confidence (confirmed / likely / uncertain / debunked)
+4. Report findings with verdicts and evidence
 
-- **Research** — Gather and organize sources around specific questions.
-- **Synthesize** — Connect findings across sources to surface patterns and themes.
-- **Verify** — Fact-check claims, cross-reference sources, flag contradictions.
-- **Summarize** — Distill large bodies of research into concise, scannable briefs.
-- **Draft** — Turn synthesized findings into polished reports or documents.
+In: claims, context | Out: verification report → `files/notes/`
 
+### Summarize
+Condense detailed research into a concise brief.
+1. Read the full source material
+2. Extract core findings and decisions
+3. Structure into a scannable format
+4. Calibrate to target length
 
-## Skill outputs
+In: research output | Out: research brief → `files/findings/`
 
-| Skill | Output | Format | Folder |
-|--------|--------|--------|--------|
-| Research | Organized source notes around specific questions | Markdown | `files/notes/` |
-| Synthesize | Cross-source patterns and themes | Markdown | `files/findings/` |
-| Verify | Fact-check report with flagged contradictions | Markdown | `files/notes/` |
-| Summarize | Concise research brief | Markdown | `files/findings/` |
-| Draft | Polished research report or document | Markdown | `files/findings/` |
+### Draft
+Write polished research reports or deliverables.
+1. Clarify purpose, audience, and format
+2. Outline sections and key points
+3. Draft full report
+4. Review for coherence and completeness
 
-## Required tools & skills
+In: findings, audience | Out: final report → `files/findings/`
 
-- **WebSearch** — Find relevant sources, papers, articles, and data online.
-- **WebFetch** — Pull content from URLs for deeper analysis and archiving.
+## Tools
+- **WebSearch** — find sources, papers, articles, and data
+- **WebFetch** — pull content from URLs for deeper analysis
 
-
-## Useful references
-
-- Research methodology guides (e.g., literature review frameworks, systematic review protocols).
-- Prior studies or reports related to your topic.
-- Domain-specific sources, databases, or directories.
-- Style guides for your final deliverable format.
-
-
-## Folder structure
-
-```
-files/
-  sources/      # Raw materials — PDFs, articles, bookmarks, screenshots
-  notes/        # Working notes, annotations, question logs
-  findings/     # Synthesized outputs, final reports, summaries
-```
+## Folders
+- `files/sources/` — PDFs, articles, images, spreadsheets, bookmarks
+- `files/notes/` — working notes, annotations, question logs
+- `files/findings/` — synthesized outputs, final reports, summaries

@@ -1,65 +1,66 @@
 ---
 name: onboarding-program
-type: playbook
-description: Design and manage a structured onboarding experience so new team members ramp up quickly and confidently.
+description: Design structured onboarding so new hires ramp up quickly.
 parameters:
   - role: What role are you onboarding for?
   - team: Which team or department?
-references:
-  - upload: The role description and team org chart
 ---
 
-# Onboarding Program (role, team)
+# Onboarding Program
 
-A workspace for building onboarding programs that get new hires productive faster. Covers planning the timeline, creating materials, tracking progress, and ensuring knowledge actually transfers.
+**Follow-up:** Who are you onboarding — what role, what team?
 
-## Follow-up question
-Who are you onboarding — what role, what team?
+## Skills
 
-## Core problems this workspace solves
+### Plan
+Build a week-by-week onboarding timeline (30/60/90 days).
+1. Clarify the onboarding goal and constraints
+2. Define measurable ramp-up milestones
+3. Break into weekly phases with timing
+4. List first actions for week one
 
-- Onboarding is ad hoc — each new hire gets a different experience depending on who happens to be available that week.
-- New team members ramp slowly because there is no structured path from day one to full productivity.
-- No single plan exists that covers what a new hire needs to learn, who they should meet, and what they should accomplish by when.
-- Knowledge transfer gaps mean critical information lives in people's heads instead of in accessible documentation.
-- Managers lack visibility into onboarding progress, so problems surface too late to fix.
+In: role, team context | Out: onboarding timeline → `files/plans/`
 
-## Skill blueprints to use
+### Checklist
+Create day-by-day task lists for new hires and managers.
+1. Map the onboarding process end-to-end
+2. Break into discrete, actionable steps
+3. Add quality checks at critical points
+4. Group by day/week with clear owners
 
-- **Plan** — Design a week-by-week onboarding timeline with milestones, covering the first 30, 60, and 90 days.
-- **Checklist** — Build day-by-day task lists for new hires and their managers so nothing gets missed.
-- **Document** — Capture institutional knowledge, processes, and context into written guides that new hires can reference.
-- **Teach** — Structure learning sessions and create explainers for tools, systems, and team norms.
-- **Review** — Set up check-in frameworks to evaluate onboarding progress and gather feedback from new hires.
+In: onboarding plan, failure points | Out: task checklist → `files/checklists/`
 
-## Skill outputs
+### Document
+Write guides for processes, tools, or team norms.
+1. Identify the process and audience
+2. Gather each step including tacit knowledge
+3. Write in clear sequential prose
+4. Add edge cases and prerequisites
 
-| Skill | Output | Format | Folder |
-|--------|--------|--------|--------|
-| Plan | Week-by-week onboarding timeline (30/60/90 days) | Markdown | `files/plans/` |
-| Checklist | Day-by-day task list for new hires and managers | Markdown | `files/checklists/` |
-| Document | Written guide for processes, tools, or team norms | Markdown | `files/materials/` |
-| Teach | Structured learning session or explainer | Markdown | `files/materials/` |
-| Review | Check-in framework for evaluating onboarding progress | Markdown | `files/plans/` |
+In: process description, audience | Out: onboarding guide → `files/materials/`
 
-## Required tools & skills
+### Teach
+Design structured learning sessions for new hires.
+1. Define learning objectives
+2. Assess the starting point of participants
+3. Design activities that bridge the gap
+4. Sequence into a timed session plan
 
-- **Google Calendar** — For scheduling onboarding sessions, check-ins, and introductions across the first weeks.
-- **File management** — Reading and writing markdown files for plans, checklists, and onboarding materials.
+In: subject, audience | Out: training session plan → `files/materials/`
 
-## Useful references
+### Review
+Evaluate onboarding progress with structured check-ins.
+1. Review what the new hire has completed
+2. Check against ramp-up milestones
+3. Surface blockers or knowledge gaps
+4. Set priorities for next period
 
-- Role descriptions with key responsibilities and expected competencies
-- Existing team documentation (processes, architecture, systems)
-- Tool guides and access setup instructions
-- Organizational charts and stakeholder maps
-- Past onboarding feedback and retrospective notes
+In: progress data, milestones | Out: check-in framework → `files/plans/`
 
-## Folder structure
+## Tools
+- **Google Calendar** — schedule onboarding sessions, check-ins, and introductions
 
-```
-files/
-  plans/         # Onboarding timelines, milestone definitions, and 30-60-90 plans
-  materials/     # Learning guides, tool walkthroughs, and knowledge base articles
-  checklists/    # Day-by-day and week-by-week task lists for new hires and managers
-```
+## Folders
+- `files/plans/` — timelines, milestone definitions, 30-60-90 plans
+- `files/materials/` — learning guides, tool walkthroughs, knowledge base articles
+- `files/checklists/` — day-by-day and week-by-week task lists

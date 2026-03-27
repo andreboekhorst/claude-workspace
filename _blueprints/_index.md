@@ -1,49 +1,76 @@
-# Blueprint Index
+# Blueprints
 
-Curated workspace bundles for specific projects and goals. Each playbook defines which skill blueprints to use, what tools are needed, and how to structure the workspace. Used during setup — removable after.
+Workspace bundles for specific goals. Each defines skills, tools, and folder structure. Used during setup.
 
 ## Product & Strategy
-| Playbook | File | Skills |
-|----------|------|---------|
-| Discover Products | `product-discovery.md` | Research users, validate ideas, write specs |
-| Plan Roadmaps | `roadmap-planning.md` | Prioritize features, plan milestones, align stakeholders |
-| Build Strategy | `strategic-planning.md` | Assess position, set goals, define initiatives |
-| Launch a Venture | `venture-launch.md` | Validate idea, plan MVP, build pitch |
-| Build OKRs | `okr-framework.md` | Draft, review, align, and score OKRs across company and teams |
+| Blueprint | File |
+|-----------|------|
+| Discover Products | `product-discovery.md` |
+| Plan Roadmaps | `roadmap-planning.md` |
+| Build Strategy | `strategic-planning.md` |
+| Launch a Venture | `venture-launch.md` |
+| Build OKRs | `okr-framework.md` |
+| Build a Personal Brand | `personal-brand.md` |
 
 ## Content & Communication
-| Playbook | File | Skills |
-|----------|------|---------|
-| Create Content | `content-pipeline.md` | Plan, draft, edit, publish content on a schedule |
-| Run Campaigns | `campaign-management.md` | Messaging, channels, measurement |
-| Build Community | `community-building.md` | Engagement, content, feedback loops, growth |
-| Manage Knowledge | `knowledge-base.md` | Organize, write, and maintain documentation |
+| Blueprint | File |
+|-----------|------|
+| Create Content | `content-pipeline.md` |
+| Run Campaigns | `campaign-management.md` |
+| Build Community | `community-building.md` |
+| Manage Knowledge | `knowledge-base.md` |
+| Run a Podcast | `podcast-production.md` |
+| Run a YouTube Channel | `youtube-channel.md` |
+
+## Creative Writing
+| Blueprint | File |
+|-----------|------|
+| Write Fiction | `fiction-writing.md` |
+| Write a Book | `book-writing.md` |
+| Write a Thesis | `thesis-writing.md` |
+| Write Standup Comedy | `standup-comedy.md` |
 
 ## Operations & Process
-| Playbook | File | Skills |
-|----------|------|---------|
-| Manage Meetings | `meeting-operations.md` | Prep agendas, run meetings, capture decisions |
-| Run Hiring | `hiring-pipeline.md` | Job posts, screening, interview prep |
-| Onboard People | `onboarding-program.md` | Design the experience for new team members |
-| Improve Processes | `process-improvement.md` | Audit current process, identify waste, redesign |
-| Plan Events | `event-planning.md` | Logistics, agenda, speakers, follow-up |
-| Manage Budgets | `budget-forecasting.md` | Track spend, model scenarios, report |
+| Blueprint | File |
+|-----------|------|
+| Manage Meetings | `meeting-operations.md` |
+| Run Hiring | `hiring-pipeline.md` |
+| Onboard People | `onboarding-program.md` |
+| Improve Processes | `process-improvement.md` |
+| Plan Events | `event-planning.md` |
+| Manage Budgets | `budget-forecasting.md` |
+| Plan a Wedding | `wedding-planning.md` |
+| Renovate Your Home | `home-renovation.md` |
 
 ## Research & Analysis
-| Playbook | File | Skills |
-|----------|------|---------|
-| Run Research | `research-project.md` | Systematic investigation with structured findings |
-| Analyze Data | `data-analysis.md` | Collect data, find patterns, present insights |
-| Improve Client Engagement | `client-engagement.md` | Proposals, deliverables, status reports |
+| Blueprint | File |
+|-----------|------|
+| Run Research | `research-project.md` |
+| Analyze Data | `data-analysis.md` |
+| Improve Client Engagement | `client-engagement.md` |
+| Run a Film Club | `film-club.md` |
 
 ## Career & Personal
-| Playbook | File | Skills |
-|----------|------|---------|
-| Prep for Job Interviews | `job-interview-prep.md` | Research company, anticipate questions, practice answers, prep your questions, mock interview, debrief |
+| Blueprint | File |
+|-----------|------|
+| Prep for Job Interviews | `job-interview-prep.md` |
+| Manage Personal Finance | `personal-finance.md` |
+| Build Habits | `habit-tracker.md` |
+| Learn a Language | `language-learning.md` |
+
+## Creative & Hobbies
+| Blueprint | File |
+|-----------|------|
+| Run a Photography Project | `photography-project.md` |
+| Produce Music | `music-production.md` |
+| Plan a Garden | `garden-planning.md` |
+| Collect & Plan Recipes | `recipe-collection.md` |
+| Run a D&D Campaign | `dungeon-master.md` |
 
 ## Design & Learning
-| Playbook | File | Skills |
-|----------|------|---------|
-| Run Design Sprints | `design-sprint.md` | Problem framing, ideation, testing concepts |
-| Design Courses | `course-design.md` | Structure lessons, activities, assessments |
-| Manage Sales | `sales-process.md` | Prospect research, outreach, proposals, follow-up |
+| Blueprint | File |
+|-----------|------|
+| Run Design Sprints | `design-sprint.md` |
+| Design Courses | `course-design.md` |
+| Manage Sales | `sales-process.md` |
+| Prepare a Conference Talk | `conference-talk.md` |

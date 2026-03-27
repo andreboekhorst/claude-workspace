@@ -1,62 +1,66 @@
 ---
 name: campaign-management
-type: playbook
 description: Plan campaigns with consistent messaging, clear channels, and measurable results.
 parameters:
   - product_or_service: What are you promoting?
   - target_audience: Who are you trying to reach?
-references:
-  - upload: Brand guidelines or past campaign brief
 ---
 
-# Campaign Management (product_or_service, target_audience)
+# Campaign Management
 
-A workspace for running marketing or communications campaigns from concept through measurement. This playbook keeps messaging aligned across every channel, ensures nothing launches without a plan, and closes the loop by tracking what actually worked.
+**Follow-up:** What are you promoting, and who's the audience?
 
-## Follow-up question
-What are you promoting, and who's the audience?
+## Skills
 
-## Core problems this workspace solves
+### Plan
+Define campaign objectives, timeline, and success metrics.
+1. Clarify the goal and target audience
+2. Define measurable key results
+3. Break into milestones with timing
+4. List first actions for each milestone
 
-- Messaging is inconsistent across channels — the email says one thing, social says another, and the landing page tells a third story.
-- There are no clear success metrics — campaigns launch without defining what "good" looks like, making it impossible to evaluate performance.
-- Campaign planning is ad hoc — timelines, assets, and approvals are managed in chat threads and memory instead of a repeatable process.
-- Results are not tracked or reviewed — campaigns end and the team moves on without capturing what worked, what failed, and why.
-- Audience targeting is vague — campaigns go out to "everyone" instead of being tailored to specific segments with specific needs.
+In: campaign goal, constraints | Out: campaign brief → `files/campaigns/`
 
-## Skill blueprints to use
+### Draft
+Write channel-specific campaign copy.
+1. Clarify purpose, audience, and format
+2. Outline sections and key points
+3. Draft full document
+4. Review for coherence and tone
 
-- **Plan** — Define campaign objectives, timeline, channels, audience segments, and success metrics before any creative work begins.
-- **Draft** — Write campaign copy for each channel, ensuring messaging stays consistent with the central campaign brief.
-- **Compare** — Evaluate messaging variants, channel options, or creative directions side by side to make informed decisions.
-- **Research** — Investigate competitor campaigns, audience behavior, and market context to ground your strategy in evidence.
-- **Review** — Run a pre-launch check on all campaign materials against brand guidelines and the campaign brief.
+In: brief, audience, channel | Out: campaign copy → `files/assets/`
 
-## Skill outputs
+### Compare
+Evaluate messaging angles or channel options side-by-side.
+1. List options to compare
+2. Set criteria (reach, cost, fit)
+3. Score each option against criteria
+4. Recommend with trade-offs noted
 
-| Skill | Output | Format | Folder |
-|--------|--------|--------|--------|
-| Plan | Campaign brief with objectives, timeline, and metrics | Markdown | `files/campaigns/` |
-| Draft | Channel-specific campaign copy | Markdown | `files/assets/` |
-| Compare | Side-by-side evaluation of messaging or channel options | Markdown | `files/campaigns/` |
-| Research | Competitor and audience analysis | Markdown | `files/campaigns/` |
-| Review | Pre-launch quality check against brief and guidelines | Markdown | `files/assets/` |
+In: options, criteria | Out: comparison matrix → `files/campaigns/`
 
-## Required tools & skills
+### Research
+Analyze competitors and audience to inform strategy.
+1. Define the question and scope
+2. Gather information from sources
+3. Organize findings into themes
+4. Deliver summary with sources cited
 
-- **WebSearch** — Research competitor campaigns, industry benchmarks, and audience trends to inform strategy and creative.
+In: topic, constraints | Out: audience/competitor analysis → `files/campaigns/`
 
-## Useful references
+### Review
+Pre-launch quality check and post-campaign retrospective.
+1. Review accomplishments against plan
+2. Check alignment with brief and guidelines
+3. Surface blockers or gaps
+4. Set priorities for next campaign
 
-- **Brand guidelines** — Visual and verbal identity rules that every campaign asset must follow.
-- **Audience profiles** — Detailed descriptions of your target segments, including demographics, pain points, and preferred channels.
-- **Past campaign results** — Performance data from previous campaigns, used to set realistic benchmarks and avoid repeating mistakes.
+In: campaign materials, metrics (screenshots, analytics CSVs) | Out: campaign review → `files/assets/`
 
-## Folder structure
+## Tools
+- **WebSearch** — research competitor campaigns, benchmarks, and audience trends
 
-```
-files/
-  campaigns/    # Campaign briefs, timelines, and messaging documents
-  assets/       # Creative assets, copy variations, and channel-specific materials
-  reports/      # Post-campaign analysis, metrics, and learnings
-```
+## Folders
+- `files/campaigns/` — briefs, timelines, messaging documents
+- `files/assets/` — copy variations, channel-specific materials
+- `files/reports/` — post-campaign analysis and learnings

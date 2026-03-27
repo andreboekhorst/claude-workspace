@@ -34,6 +34,7 @@ Look at:
 
 # Rules
 
+- **Skip during initial setup.** If the session that just completed was the Setup skill (`_setup.md`), stay silent and end immediately. Setup is a special case — the workspace is still being configured, so improvement suggestions are premature.
 - **Stay silent if there's nothing to improve.** Do not force suggestions. No improvement is the most common outcome — that's fine.
 - **Maximum one suggestion per session.** If you spot multiple things, pick the highest-impact one.
 - **Be concrete.** "You could add a skill for X" is good. "Maybe consider improving your workflow" is not.

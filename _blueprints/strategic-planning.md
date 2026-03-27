@@ -1,69 +1,66 @@
 ---
 name: strategic-planning
-type: playbook
-description: Assess your current position, set meaningful goals, and define initiatives that move the needle.
+description: Assess your position, set meaningful goals, and define initiatives that move the needle.
 parameters:
-  - organization_type: What kind of organization — startup, nonprofit, enterprise, agency?
+  - organization_type: What kind of org — startup, nonprofit, enterprise, agency?
   - planning_horizon: What timeframe — next quarter, next year, 3-year vision?
-references:
-  - upload: Current strategy document or last board deck
 ---
 
-# Strategic Planning (organization_type, planning_horizon)
+# Strategic Planning
 
-A workspace for leaders and teams navigating high-level direction-setting. This playbook structures the work of understanding where you are, deciding where to go, and building a credible path to get there.
+**Follow-up:** What's your organization, and what's on the horizon?
 
+## Skills
 
-## Follow-up question
-What's your organization, and what's on the horizon?
+### Research
+Conduct market intelligence and environmental scans.
+1. Define the question and scope
+2. Gather information from sources
+3. Organize findings into themes
+4. Deliver summary with sources cited
 
-## Core problems this workspace solves
+In: strategic question, constraints | Out: market intelligence → `files/analysis/`
 
-- No clear direction — the organization reacts to events instead of driving toward a goal
-- Goals are too vague to act on, making it impossible to measure progress
-- Initiatives are disconnected from strategy, creating busy work without impact
-- No structured way to track whether strategic bets are paying off
-- Context and rationale behind past strategic decisions are lost over time
+### Plan
+Define strategic initiatives with milestones and key results.
+1. Clarify the strategic goal
+2. Define measurable key results
+3. Break into milestones with timing
+4. List first actions
 
+In: strategy, constraints | Out: initiative plan → `files/strategy/`
 
-## Skill blueprints to use
+### Prioritize
+Rank initiatives by impact, effort, and alignment.
+1. Collect all candidate initiatives
+2. Define 2-4 scoring criteria
+3. Score each initiative
+4. Rank and present with rationale
 
-- **Research** — Gather market intelligence, internal data, and environmental signals
-- **Plan** — Translate strategic intent into concrete initiatives with milestones
-- **Prioritize** — Focus resources on the highest-leverage opportunities
-- **Decide** — Make and document strategic choices with clear reasoning and trade-offs
-- **Review** — Assess progress against goals and adjust course as conditions change
+In: initiative list, criteria | Out: ranked initiatives → `files/strategy/`
 
+### Decide
+Make strategic choices with structured trade-off analysis.
+1. Frame the decision as a clear question
+2. List options including "do nothing"
+3. Score against key criteria
+4. Document recommendation with trade-offs
 
-## Skill outputs
+In: decision context, options | Out: decision record → `files/strategy/`
 
-| Skill | Output | Format | Folder |
-|--------|--------|--------|--------|
-| Research | Market intelligence and environmental scan | Markdown | `files/analysis/` |
-| Plan | Strategic initiative plan with milestones | Markdown | `files/strategy/` |
-| Prioritize | Ranked initiative list with scoring rationale | Markdown | `files/strategy/` |
-| Decide | Strategic decision record with trade-offs | Markdown | `files/strategy/` |
-| Review | Progress assessment against goals | Markdown | `files/goals/` |
+### Review
+Assess progress against strategic goals periodically.
+1. Review what was accomplished
+2. Check against strategic objectives
+3. Surface blockers and shifts
+4. Set priorities for next period
 
-## Required tools & skills
+In: progress data (reports, dashboard screenshots, CSVs), goals | Out: progress assessment → `files/goals/`
 
-- **WebSearch** — Research market trends, competitive moves, and industry analysis
-- File reading and writing for maintaining strategic documents and analyses
+## Tools
+- **WebSearch** — market trends, competitive moves, industry analysis
 
-
-## Useful references
-
-- Market data, industry reports, and trend analyses
-- Financial reports, revenue data, and unit economics
-- Competitive landscape maps and positioning documents
-- Internal performance metrics and OKR histories
-- Board decks, investor updates, or annual planning outputs
-
-
-## Folder structure
-
-Suggested subfolders inside `files/`:
-
-- `files/strategy/` — Strategic plans, vision documents, positioning frameworks
-- `files/analysis/` — Market research, SWOT analyses, competitive assessments
+## Folders
+- `files/strategy/` — strategic plans, vision documents, positioning frameworks
+- `files/analysis/` — market research, SWOT analyses, competitive assessments
 - `files/goals/` — OKRs, KPIs, initiative trackers, progress reviews

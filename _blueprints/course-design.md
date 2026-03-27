@@ -1,71 +1,67 @@
 ---
 name: course-design
-type: playbook
-description: Structure lessons, learning activities, and assessments into a coherent course.
+description: Structure lessons, activities, and assessments into a coherent course.
 parameters:
   - subject: What are you teaching?
   - learner_level: Who are the learners — beginners, intermediate, advanced?
-references:
-  - upload: Current syllabus, learning objectives, or existing course materials
 ---
 
-# Course Design (subject, learner_level)
+# Course Design
 
-A workspace for building educational experiences — from defining learning
-objectives through sequencing content, designing activities, and creating
-assessments. Produces a complete, teachable course package.
+**Follow-up:** What are you teaching, and to whom?
 
+## Skills
 
-## Follow-up question
-What are you teaching, and to whom?
+### Teach
+Design a lesson or training session with objectives, activities, and checks.
+1. Define learning objectives
+2. Assess the starting point of participants
+3. Design activities that bridge the gap
+4. Build assessment checks for each objective
+5. Sequence into a timed session plan
 
-## Core problems this workspace solves
+In: subject, audience, format | Out: session plan → `files/materials/`
 
-- Learning objectives are vague or missing, so lessons lack direction.
-- Content is not sequenced well, leaving learners confused or overwhelmed.
-- There is no meaningful assessment of understanding — just content delivery.
-- Materials are scattered across docs, slides, and drives with no structure.
-- Course iteration is hard because there is no single view of the full curriculum.
+### Plan
+Map the full course with modules, lessons, and timing.
+1. Clarify the course goal and constraints
+2. Define measurable learning outcomes
+3. Break into modules and milestones
+4. List first actions for each module
 
+In: course goals, constraints | Out: course map → `files/curriculum/`
 
-## Skill blueprints to use
+### Draft
+Write lesson content, instructions, or handouts.
+1. Clarify purpose, audience, and format
+2. Outline sections and key points
+3. Draft full document
+4. Review for clarity and completeness
 
-- **Teach** — Structure explanations for clarity, building from simple to complex.
-- **Plan** — Map the full course arc — modules, lessons, dependencies, timing.
-- **Draft** — Write lesson content, instructions, and handouts.
-- **Checklist** — Create rubrics, review criteria, and quality checks for materials.
-- **Explain** — Break down difficult concepts into accessible, layered explanations.
+In: brief, audience | Out: lesson content → `files/materials/`
 
+### Checklist
+Build rubrics or quality checklists for course materials.
+1. Define the process to standardize
+2. Break into discrete, actionable steps
+3. Add quality checks at critical points
+4. Group into logical sections
 
-## Skill outputs
+In: process description, standards | Out: rubric or checklist → `files/assessments/`
 
-| Skill | Output | Format | Folder |
-|--------|--------|--------|--------|
-| Teach | Structured explanation building from simple to complex | Markdown | `files/materials/` |
-| Plan | Full course map with modules, lessons, and timing | Markdown | `files/curriculum/` |
-| Draft | Lesson content, instructions, or handouts | Markdown | `files/materials/` |
-| Checklist | Rubric or quality checklist for materials | Markdown | `files/assessments/` |
-| Explain | Accessible breakdown of a difficult concept | Markdown | `files/materials/` |
+### Explain
+Break down a complex topic for the target learner level.
+1. Clarify topic and audience
+2. Identify core concepts and misconceptions
+3. Choose analogies that bridge existing knowledge
+4. Build explanation layer by layer
 
-## Required tools & skills
+In: topic, audience level | Out: accessible explanation → `files/materials/`
 
-No additional tools required. This playbook runs entirely within Claude
-using text-based curriculum design and content creation.
+## Tools
+- No external tools required
 
-
-## Useful references
-
-- Curriculum standards or competency frameworks for your subject area.
-- Learner profiles — who they are, what they know, what they struggle with.
-- Existing course materials, syllabi, or textbooks to build on or replace.
-- Pedagogical frameworks (e.g., Bloom's taxonomy, backward design).
-
-
-## Folder structure
-
-```
-files/
-  curriculum/    # Course outlines, module maps, learning objectives
-  materials/     # Lesson content, slides, handouts, activity instructions
-  assessments/   # Quizzes, assignments, rubrics, answer keys
-```
+## Folders
+- `files/curriculum/` — course outlines, module maps, learning objectives
+- `files/materials/` — lesson content, handouts, activity instructions
+- `files/assessments/` — quizzes, assignments, rubrics, answer keys

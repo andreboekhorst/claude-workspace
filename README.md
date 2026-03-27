@@ -3,17 +3,18 @@
 ---
 
 <p align="center">
-  <big><big><a href="https://github.com/andreboekhorst/claude-workspace-designer/archive/refs/heads/main.zip">Download workspace-designer.zip</a></big></big>
+  <big>🦀 <a href="https://github.com/andreboekhorst/claude-workspace-designer/archive/refs/heads/main.zip">Download workspace-designer.zip</a> 🦀</big>
 </p>
 
 ---
 
-# 🐚 Workspace Designer
+# Add skills to your projects
 Workspace designer adds skills to your Claude Cowork projects, and only to that project. This allows you to create workflows adjusted to your project needs. Since these skills write themselves you don't need to touch any code. You can continuously adjust and finetune its behaviour, and when you are happy, you can even export a clean project configuration for you to share and reuse. 
 
-- 🐙 **Skills for Claude Cowork Projects**
-- 🦀 **No Code Required**
-- 🦦 **Finetune while using**
+- 🐙 **Skills for Cowork**
+- 🦈 **Persistent Memory**
+- 🦦 **Flexible behaviours**
+- 🧙🏻 **Shape Personalities**
 - ⛵️ **Export, Share, Re-use**
 
 ## Getting Started
@@ -30,27 +31,55 @@ Getting started is easy, all you need to do is download [this workspace](https:/
 
 When you are happy with your workspace, you can export and reuse it for others. Just ask to export the project. It will strip any personal files from the project and create a zip file.
 
+# 🐙 Examples
+
+These are just some of the workspaces you can build — pick a blueprint and make it yours.
+
+| Workspace | Description |
+|-----------|-------------|
+| **Job Interview Prep** | Nail your next interview by researching the company and practicing structured answers. |
+| **Content Pipeline** | Stay on top of your publishing schedule by planning, drafting, and editing in one place. |
+| **Dungeon Master** | Run a great campaign by generating NPCs, prepping sessions, and tracking lore. |
+| **Fiction Writing** | Write better stories by building worlds, drafting scenes, and self-critiquing your plot. |
+| **Recipe Collection** | Organize your kitchen by photographing recipes, planning meals, and generating grocery lists. |
+| **Thesis Writing** | Finish your thesis by organizing sources, structuring chapters, and drafting with citations. |
+| **Travel Planning** | Plan the perfect trip by researching destinations, building itineraries, and packing smart. |
+| **Personal Finance** | Take control of your money by importing bank data, tracking spending, and setting goals. |
+
+# 🐙 Core Workflows
+
+Every workspace comes with these built-in workflows:
+
+- **Setup** — First-time configuration wizard that creates your folder structure and initial skills
+- **Add Skill** — Create new skills by describing what you need; Claude writes the instructions
+- **Add Reference** — Register files, URLs, or background knowledge that skills can draw on
+- **Resume** — Pick up where you left off with a summary of recent activity and next steps
+- **Reflect** — Review your session and suggest workspace improvements
+- **Set Personality** — Define the workspace's voice, tone, and character
+- **Export** — Package your workspace into a clean, shareable template
+- **Help** — List all available skills and what they do
+
 # 🏖️ F.A.Q.
 
-## How Does It Work?
+### How Does It Work?
 
 Claude Cowork is basically Claude Code under the hood. That means it can write its own prompts! With this in mind we created a specification for a workspace that contains a defined structure, and a set of configurations, skills, logs, and references. When you run an empty project for the first time, it will use these predefined configurations to help you set up a workspace and create skills. Read more of this specification below.
 
 When we first start a conversation with a workspace, it triggers a setup-flow that helps you define your needs for a workspace. When that's done - it will start writing all of the skills themselves.
 
-## What are workspace specifications?
+### What are workspace specifications?
 In the Workspace specifications we propose a structure to which we can enable container-based Claude projects. It contains a set of built-in skills, logs and user generated skills. All of these skills are being triggered through progressive disclosure.
 
-## What is Progressive Disclosure?
+### What is Progressive Disclosure?
 Whenever you add new skills to your workflow, they are not added directly to the prompt. In the main entry file (`CLAUDE.md`) we list all available skills with a reference to the full instructions. The detailed instructions are only loaded on-demand when a skill is activated.
 
-## Can I reuse the skills?
+### Can I reuse the skills?
 Claude Cowork doesn't really support project-based skills yet. So the skills within this project are not the same as the [skills for claude code](https://code.claude.com/docs/en/skills). But if you want to, you could take the individual skills file from the `_workspace/skills` and turn it into a Claude Code command.
 
-## Is it safe?
+### Is it safe?
 When you run someone else's prompts on your computer, and you give it access to your files, there are inherent risks involved. So please always check the playbooks for any weird prompts (Claude cowork could actually help with that).
 
-## Whats next?
+### Whats next?
 Currently, Claude Cowork is in it's infancy and it does not have the nice features that claude chat has to display and interact with people. But eventually this will grow. Also, I think having containerised llm packages are the way forward and we will probably be able to create software fully written and shaped by its user in a similar unboarding steps.
 
 --- 

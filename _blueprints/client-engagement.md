@@ -1,70 +1,66 @@
 ---
 name: client-engagement
-type: playbook
 description: Manage proposals, deliverables, and status reports for client work.
 parameters:
   - client_type: What kind of clients do you work with?
   - service_offering: What do you deliver for them?
-references:
-  - upload: A recent proposal or statement of work
 ---
 
-# Client Engagement (client_type, service_offering)
+# Client Engagement
 
-A workspace for running client projects smoothly — from winning the work
-through delivery and reporting. Keeps proposals sharp, deliverables
-consistent, and clients informed without the manual overhead.
+**Follow-up:** What kind of clients do you work with?
 
+## Skills
 
-## Follow-up question
-What kind of clients do you work with?
+### Draft
+Write proposals, deliverables, or client-facing documents.
+1. Clarify purpose, audience, and format
+2. Outline sections and key points
+3. Draft full document
+4. Review for coherence and completeness
 
-## Core problems this workspace solves
+In: brief, audience | Out: proposal or deliverable → `files/deliverables/`
 
-- Proposals take too long to produce and vary wildly in quality.
-- Deliverable quality is inconsistent across projects and team members.
-- Status reporting is manual, tedious, and often skipped.
-- Client expectations are unclear or poorly documented from the start.
-- Project context gets lost between meetings, causing repeat conversations.
+### Plan
+Build project plans with phases, milestones, and tasks.
+1. Clarify the project goal and constraints
+2. Define measurable success criteria
+3. Break into milestones with timing
+4. List immediate next steps
 
+In: project scope, constraints | Out: project plan → `files/proposals/`
 
-## Skill blueprints to use
+### Review
+Check deliverable quality and run periodic status reviews.
+1. Review accomplishments against plan
+2. Check goal status
+3. Surface blockers
+4. Set priorities for next period
 
-- **Draft** — Write proposals, deliverables, and client-facing documents.
-- **Plan** — Break projects into phases, milestones, and task lists.
-- **Review** — Quality-check deliverables before sending to clients.
-- **Summarize** — Generate status updates and meeting recaps quickly.
-- **Prep** — Prepare agendas, talking points, and background briefs for client meetings.
+In: deliverables, goals | Out: quality review → `files/deliverables/`
 
+### Summarize
+Condense project status or meeting notes for clients.
+1. Read the full source material
+2. Extract key points and decisions
+3. Structure into a scannable format
+4. Calibrate to target length
 
-## Skill outputs
+In: meeting notes, project data (PDFs, spreadsheets, screenshots) | Out: status update → `files/updates/`
 
-| Skill | Output | Format | Folder |
-|--------|--------|--------|--------|
-| Draft | Proposal, deliverable, or client-facing document | Markdown | `files/deliverables/` |
-| Plan | Project plan with phases, milestones, and tasks | Markdown | `files/proposals/` |
-| Review | Quality-checked deliverable with revision notes | Markdown | `files/deliverables/` |
-| Summarize | Status update or meeting recap | Markdown | `files/updates/` |
-| Prep | Meeting agenda, talking points, or background brief | Markdown | `files/updates/` |
+### Prep
+Prepare agendas and talking points for client meetings.
+1. Clarify meeting purpose and attendees
+2. Draft time-boxed agenda items
+3. Prepare talking points per item
+4. Gather background material and open items
 
-## Required tools & skills
+In: meeting context, prior notes | Out: meeting prep doc → `files/updates/`
 
-- **Google Calendar** — Track client meetings, deadlines, and review cycles.
+## Tools
+- **Google Calendar** — track client meetings, deadlines, and review cycles
 
-
-## Useful references
-
-- Proposal templates and past winning proposals for structure and language.
-- Client briefs, contracts, and statements of work.
-- Project scoping documents and estimation frameworks.
-- Internal quality standards or style guides.
-
-
-## Folder structure
-
-```
-files/
-  proposals/      # Proposals, scoping docs, estimates
-  deliverables/   # Work products sent to clients
-  updates/        # Status reports, meeting notes, change logs
-```
+## Folders
+- `files/proposals/` — proposals, scoping docs, estimates
+- `files/deliverables/` — work products sent to clients
+- `files/updates/` — status reports, meeting notes, change logs

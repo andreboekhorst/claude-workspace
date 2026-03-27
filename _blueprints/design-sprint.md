@@ -1,71 +1,67 @@
 ---
 name: design-sprint
-type: playbook
 description: Frame problems, generate ideas, and test concepts before building.
 parameters:
   - design_challenge: What problem are you trying to solve?
   - timeline: How long is the sprint — a day, a week, something else?
-references:
-  - search: Existing solutions and competitor approaches to the challenge
 ---
 
-# Design Sprint (design_challenge, timeline)
+# Design Sprint
 
-A workspace for structured creative problem-solving. Moves a team from
-vague problem space to tested concepts through disciplined framing,
-divergent ideation, and rapid validation.
+**Follow-up:** What are you designing, and who's in the room?
 
+## Skills
 
-## Follow-up question
-What are you designing, and who's in the room?
+### Research
+Investigate the problem space — users, constraints, and existing solutions.
+1. Define the question and scope
+2. Gather information from sources
+3. Organize findings into themes
+4. Deliver summary with gaps flagged
 
-## Core problems this workspace solves
+In: design challenge, user context (photos, wireframes, screenshots) | Out: user insights summary → `files/research/`
 
-- Teams jump to solutions before properly understanding the problem.
-- Ideas are not tested or validated before committing resources to build them.
-- There is no structured ideation process, so the loudest voice wins.
-- Stakeholder alignment is missing, causing late-stage surprises and rework.
-- Design decisions are not documented, making it hard to explain rationale later.
+### Brainstorm
+Generate and cluster ideas, then converge on the strongest.
+1. Clarify the challenge as a clear prompt
+2. Diverge — generate ideas across multiple lenses
+3. Cluster related ideas into themes
+4. Converge on top 3-5 with rationale
 
+In: challenge, constraints | Out: clustered ideas → `files/concepts/`
 
-## Skill blueprints to use
+### Decide
+Evaluate concepts against criteria and pick a direction.
+1. Frame the decision as a clear question
+2. List options including "do nothing"
+3. Score against 3-5 criteria
+4. Recommend with trade-offs noted
 
-- **Research** — Gather user insights, competitive landscape, and constraints.
-- **Brainstorm** — Generate diverse ideas using structured divergent thinking.
-- **Decide** — Evaluate options against criteria and converge on a direction.
-- **Pre-mortem** — Identify risks and failure modes before committing to a path.
-- **Draft** — Document concepts, decisions, and next steps for handoff.
+In: concepts, criteria | Out: evaluation matrix → `files/concepts/`
 
+### Pre-mortem
+Stress-test a plan by imagining it has already failed.
+1. Summarize the plan and its assumptions
+2. Assume failure — set the scene
+3. Brainstorm causes across categories
+4. Rank by likelihood and impact
+5. Propose mitigations for top risks
 
-## Skill outputs
+In: plan, assumptions | Out: risk register → `files/concepts/`
 
-| Skill | Output | Format | Folder |
-|--------|--------|--------|--------|
-| Research | User insights and constraints summary | Markdown | `files/research/` |
-| Brainstorm | Clustered ideas with evaluation notes | Markdown | `files/concepts/` |
-| Decide | Evaluation matrix and selected direction | Markdown | `files/concepts/` |
-| Pre-mortem | Risk analysis with mitigation strategies | Markdown | `files/concepts/` |
-| Draft | Concept document and next steps for handoff | Markdown | `files/prototypes/` |
+### Draft
+Write up the selected concept for handoff.
+1. Clarify purpose, audience, and format
+2. Outline sections and key points
+3. Draft full document
+4. Review for coherence and completeness
 
-## Required tools & skills
+In: selected concept, sketches/mockups, audience | Out: concept document → `files/prototypes/`
 
-No additional tools required. This playbook runs entirely within Claude
-using text-based ideation, evaluation, and documentation.
+## Tools
+- No external tools required
 
-
-## Useful references
-
-- User research findings — interviews, surveys, behavioral data.
-- Design principles or heuristics your team follows.
-- Competitive examples and analogous solutions from other domains.
-- Technical constraints or platform guidelines that bound the solution space.
-
-
-## Folder structure
-
-```
-files/
-  research/     # User insights, competitive analysis, problem framing docs
-  concepts/     # Ideas, sketches, concept descriptions, evaluation matrices
-  prototypes/   # Refined concepts, wireframes, test plans, feedback logs
-```
+## Folders
+- `files/research/` — user insights, competitive analysis, problem framing
+- `files/concepts/` — ideas, concept descriptions, evaluation matrices
+- `files/prototypes/` — refined concepts, test plans, feedback logs

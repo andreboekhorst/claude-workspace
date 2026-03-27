@@ -1,72 +1,77 @@
 ---
 name: venture-launch
-type: playbook
-description: Validate a business idea, scope an MVP, and build a compelling pitch to launch.
+description: Validate a business idea, scope an MVP, and build a compelling pitch.
 parameters:
   - venture_idea: What's the idea — in one sentence?
   - target_market: Who is this for?
-references:
-  - search: Market size, key competitors, and recent funding in the space
 ---
 
-# Venture Launch (venture_idea, target_market)
+# Venture Launch
 
-A workspace for founders and entrepreneurial teams going from idea to launch. This playbook structures the critical early work — testing assumptions, defining what to build first, and crafting a pitch that earns attention and resources.
+**Follow-up:** What's the idea — in one sentence?
 
+## Skills
 
-## Follow-up question
-What's the idea — in one sentence?
+### Research
+Investigate market size, competitors, and customer needs.
+1. Define the question and scope
+2. Gather information from sources
+3. Organize findings into themes
+4. Deliver summary with sources cited
 
-## Core problems this workspace solves
+In: venture idea, market | Out: market/competitor analysis → `files/research/`
 
-- The idea is untested — no evidence that the problem is real or the solution fits
-- Scope is unclear, making it impossible to know what an MVP actually looks like
-- The pitch is unconvincing because it lacks structure, data, or a clear narrative
-- There is no structured plan connecting validation to build to launch
-- Founders spend time on low-leverage tasks instead of the riskiest assumptions
+### Brainstorm
+Generate and evaluate solution approaches or business models.
+1. Clarify the challenge as a clear prompt
+2. Diverge — generate ideas across multiple lenses
+3. Cluster related ideas into themes
+4. Converge on top 3-5 with rationale
 
+In: challenge, constraints | Out: clustered ideas → `files/research/`
 
-## Skill blueprints to use
+### Decide
+Make go/no-go and scoping decisions with structured analysis.
+1. Frame the decision as a clear question
+2. List options including "do nothing"
+3. Score against key criteria
+4. Document recommendation with trade-offs
 
-- **Research** — Investigate the market, target users, and competitive landscape
-- **Brainstorm** — Generate and explore solution approaches, business models, and positioning
-- **Decide** — Choose between approaches using evidence and structured evaluation
-- **Plan** — Define MVP scope, launch milestones, and a path from here to there
-- **Pitch** — Build investor decks, one-pagers, and elevator pitches that land
-- **Draft** — Write business plans, partnership proposals, and go-to-market briefs
+In: options, evidence | Out: decision record → `files/research/`
 
+### Plan
+Define MVP scope and launch milestones.
+1. Clarify the launch goal and constraints
+2. Define measurable key results
+3. Break into milestones with timing
+4. List first actions
 
-## Skill outputs
+In: venture scope, constraints | Out: MVP plan → `files/plans/`
 
-| Skill | Output | Format | Folder |
-|--------|--------|--------|--------|
-| Research | Market/competitor analysis document | Markdown | `files/research/` |
-| Brainstorm | Clustered ideas with evaluation notes | Markdown | `files/research/` |
-| Decide | Decision record with reasoning and trade-offs | Markdown | `files/research/` |
-| Plan | MVP scope and launch milestone plan | Markdown | `files/plans/` |
-| Pitch | Investor deck, one-pager, or elevator pitch | Markdown | `files/pitches/` |
-| Draft | Business plan, proposal, or go-to-market brief | Markdown | `files/plans/` |
+### Pitch
+Craft investor decks, one-pagers, or elevator pitches.
+1. Identify the audience and what they care about
+2. Define the core proposition in one sentence
+3. Build supporting arguments with evidence
+4. Anticipate objections and prepare responses
+5. Craft the narrative arc with a clear ask
 
-## Required tools & skills
+In: venture, audience, desired outcome | Out: pitch document → `files/pitches/`
 
-- **WebSearch** — Research markets, competitors, regulations, and potential partners
-- **WebFetch** — Pull in specific pages, data, and resources from the web
-- File reading and writing for managing all venture artifacts
+### Draft
+Write business plans, proposals, or go-to-market briefs.
+1. Clarify purpose, audience, and format
+2. Outline sections and key points
+3. Draft full document
+4. Review for coherence and completeness
 
+In: brief, research | Out: business plan → `files/plans/`
 
-## Useful references
+## Tools
+- **WebSearch** — research markets, competitors, and regulations
+- **WebFetch** — pull specific pages and data from the web
 
-- Market research reports and TAM/SAM/SOM estimates
-- Competitor examples — websites, pitch decks, pricing pages
-- Financial models, unit economics, and funding benchmarks
-- Customer interview notes and survey results
-- Relevant case studies or post-mortems from similar ventures
-
-
-## Folder structure
-
-Suggested subfolders inside `files/`:
-
-- `files/research/` — Market data, competitor analysis, user interview notes
-- `files/pitches/` — Pitch decks, one-pagers, executive summaries
+## Folders
+- `files/research/` — market data, competitor analysis, interview notes
+- `files/pitches/` — pitch decks, one-pagers, executive summaries
 - `files/plans/` — MVP definitions, launch plans, financial projections

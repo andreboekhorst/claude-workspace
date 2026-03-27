@@ -1,65 +1,66 @@
 ---
 name: okr-framework
-type: playbook
-description: Build, review, and improve OKRs for your company and teams — from drafting objectives to scoring results.
+description: Draft, review, and score OKRs across company and team levels.
 parameters:
-  - org_level: What level are you setting OKRs for — company, department, team?
-  - cycle_length: How long is each OKR cycle — monthly, quarterly, annual?
-references:
-  - upload: Company strategy document or previous cycle's OKRs
+  - org_level: What level — company, department, team?
+  - cycle_length: How long is each cycle — monthly, quarterly, annual?
 ---
 
-# OKR Framework (org_level, cycle_length)
+# OKR Framework
 
-A workspace for building and running an effective OKR (Objectives and Key Results) practice. Covers the full cycle: drafting strong objectives, defining measurable key results, aligning OKRs across company and team levels, running check-ins, and scoring at the end of each cycle.
+**Follow-up:** What level are you setting OKRs for — company-wide, a specific team, or both?
 
-## Follow-up question
-What level are you setting OKRs for — company-wide, a specific team, or both?
+## Skills
 
-## Core problems this workspace solves
+### Draft
+Write OKR sets with clear objectives and measurable key results.
+1. Clarify purpose, audience, and scope
+2. Outline objectives and candidate key results
+3. Draft full OKR set
+4. Review for measurability and ambition
 
-- Objectives are vague or uninspiring, reading like task lists instead of meaningful direction.
-- Key results are not measurable, making it impossible to know whether you hit the target or not.
-- Company OKRs and team OKRs are disconnected — teams set goals in isolation without linking to the bigger picture.
-- OKRs are set at the start of the quarter and forgotten — no structured check-ins to course-correct.
-- Scoring and retrospectives are skipped, so the organization never learns what makes a good OKR or why targets were missed.
+In: strategy context, goals | Out: OKR set → `files/okrs/`
 
-## Skill blueprints to use
+### Review
+Assess OKR quality and suggest improvements.
+1. Review current OKRs against best practices
+2. Check measurability and alignment
+3. Surface weak objectives or vague key results
+4. Recommend specific improvements
 
-- **Draft** — Write clear, ambitious objectives and measurable key results following OKR best practices.
-- **Review** — Assess existing OKRs for quality: are objectives inspiring? Are key results measurable, specific, and time-bound?
-- **Evaluate** — Score OKRs at the end of a cycle, analyze what drove results, and identify patterns across teams.
-- **Plan** — Structure the OKR cycle: timeline, alignment sessions, check-in cadence, and scoring schedule.
-- **Synthesize** — Align OKRs across levels by mapping team key results to company objectives and spotting gaps or overlaps.
+In: OKR draft | Out: quality assessment → `files/reviews/`
 
-## Skill outputs
+### Evaluate
+Score OKRs at end-of-cycle with structured analysis.
+1. State each key result neutrally
+2. Map evidence for and against achievement
+3. Rate confidence in each score
+4. Conclude with overall assessment
 
-| Skill | Output | Format | Folder |
-|--------|--------|--------|--------|
-| Draft | OKR set with objectives and key results | Markdown | `files/okrs/` |
-| Review | Quality assessment with improvement suggestions | Markdown | `files/reviews/` |
-| Evaluate | End-of-cycle scorecard with analysis | Markdown | `files/scores/` |
-| Plan | OKR cycle plan with timeline and cadence | Markdown | `files/okrs/` |
-| Synthesize | Alignment map linking team OKRs to company objectives | Markdown | `files/okrs/` |
+In: OKR set, progress data (spreadsheets, dashboard screenshots) | Out: end-of-cycle scorecard → `files/scores/`
 
-## Required tools & skills
+### Plan
+Design the OKR cycle timeline and cadence.
+1. Clarify the cycle scope and constraints
+2. Define milestones (drafting, review, check-in, scoring)
+3. Assign timing to each phase
+4. List first actions
 
-- No external tools required. This playbook works entirely with file-based drafting, review, and documentation.
-- Useful if available: **Google Calendar** for scheduling OKR setting sessions, check-ins, and scoring reviews.
+In: cycle parameters | Out: cycle plan → `files/okrs/`
 
-## Useful references
+### Synthesize
+Build alignment maps linking team OKRs to company objectives.
+1. Collect OKRs from all levels
+2. Extract key connections and gaps
+3. Identify themes and misalignments
+4. Write cross-level alignment summary
 
-- Company mission, vision, and strategy documents
-- Previous OKR cycles and their scores
-- Team charters or responsibility descriptions
-- OKR methodology guides (e.g., Measure What Matters, radical focus)
-- Business metrics and dashboards that inform key result targets
+In: company + team OKRs | Out: alignment map → `files/okrs/`
 
-## Folder structure
+## Tools
+- **Google Calendar** (optional) — schedule OKR setting sessions and check-ins
 
-```
-files/
-  okrs/          # Current and past OKR sets, alignment maps, and cycle plans
-  reviews/       # Quality assessments and improvement notes
-  scores/        # End-of-cycle scorecards, retrospectives, and trend analyses
-```
+## Folders
+- `files/okrs/` — current and past OKR sets, alignment maps, cycle plans
+- `files/reviews/` — quality assessments and improvement notes
+- `files/scores/` — end-of-cycle scorecards and trend analyses

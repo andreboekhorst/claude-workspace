@@ -1,65 +1,66 @@
 ---
 name: process-improvement
-type: playbook
-description: Audit a current process, identify waste and friction, then redesign and document the improved version.
+description: Audit a process, identify waste, then redesign and document the improved version.
 parameters:
   - process_name: Which process are you improving?
   - current_pain: What's the biggest pain point right now?
-references:
-  - upload: Current process documentation or workflow diagram
 ---
 
-# Process Improvement (process_name, current_pain)
+# Process Improvement
 
-A workspace for systematically improving how work gets done. Start by understanding the current state, find where time and effort are wasted, design a better process, and document it so the change actually sticks.
+**Follow-up:** Which process are you looking at?
 
-## Follow-up question
-Which process are you looking at?
+## Skills
 
-## Core problems this workspace solves
+### Research
+Map the current process end-to-end.
+1. Define the process scope and boundaries
+2. Gather information from stakeholders and docs
+3. Organize into a step-by-step flow
+4. Flag gaps and assumptions
 
-- Existing processes are inefficient — they evolved organically and no one has examined them critically.
-- Steps are duplicated across teams or entirely unnecessary, but persist because "that's how we've always done it."
-- No one owns process improvement, so problems are noticed but never fixed in a structured way.
-- Changes that do get made don't stick because they aren't documented, communicated, or reinforced.
-- There is no baseline measurement, making it impossible to know if an improvement actually improved anything.
+In: process name, stakeholder input | Out: current-state process map → `files/audits/`
 
-## Skill blueprints to use
+### Evaluate
+Identify bottlenecks, waste, and friction points.
+1. Frame the evaluation question neutrally
+2. Map arguments for and against each step's value
+3. Rate severity and frequency of issues
+4. Conclude with prioritized problem list
 
-- **Research** — Map the current process end-to-end, interviewing stakeholders and documenting each step, handoff, and decision point.
-- **Evaluate** — Analyze the current state for bottlenecks, redundancies, delays, and failure points using structured criteria.
-- **Decide** — Prioritize which improvements to make based on effort, impact, and risk, so resources go where they matter most.
-- **Document** — Write clear process documentation for the redesigned process, including roles, steps, and decision rules.
-- **Checklist** — Create implementation checklists for rolling out the new process and verifying adoption.
+In: process map, pain points | Out: bottleneck analysis → `files/audits/`
 
-## Skill outputs
+### Decide
+Prioritize which improvements to pursue.
+1. Frame the decision as a clear question
+2. List improvement options including "do nothing"
+3. Score against criteria (impact, effort, risk)
+4. Recommend with trade-offs noted
 
-| Skill | Output | Format | Folder |
-|--------|--------|--------|--------|
-| Research | End-to-end current process map | Markdown | `files/audits/` |
-| Evaluate | Bottleneck and waste analysis | Markdown | `files/audits/` |
-| Decide | Prioritized improvement recommendations | Markdown | `files/proposals/` |
-| Document | Redesigned process documentation (SOP) | Markdown | `files/procedures/` |
-| Checklist | Implementation and adoption checklist | Markdown | `files/proposals/` |
+In: problem list, constraints | Out: improvement recommendations → `files/proposals/`
 
-## Required tools & skills
+### Document
+Write the redesigned process as a standard operating procedure.
+1. Identify the process and intended audience
+2. Gather each step including edge cases
+3. Write in clear sequential prose
+4. Add prerequisites and troubleshooting
 
-- No external tools required. This playbook works entirely with file-based research, analysis, and documentation.
-- Useful if available: diagramming tools for process maps, spreadsheet tools for quantitative analysis.
+In: redesigned process | Out: new SOP → `files/procedures/`
 
-## Useful references
+### Checklist
+Create an implementation and adoption checklist.
+1. Map the rollout process end-to-end
+2. Break into discrete steps with owners
+3. Add quality checks at critical points
+4. Group into phases (pilot, rollout, review)
 
-- Current process documentation (even if informal or outdated)
-- Performance metrics and cycle time data for the existing process
-- Team feedback, complaints, and suggestions related to the process
-- Industry benchmarks or best practices for similar processes
-- Previous improvement attempts and their outcomes
+In: improvement plan | Out: implementation checklist → `files/proposals/`
 
-## Folder structure
+## Tools
+- No external tools required
 
-```
-files/
-  audits/        # Current-state process maps, stakeholder interviews, and gap analyses
-  proposals/     # Improvement recommendations, redesigned process flows, and implementation plans
-  procedures/    # Final documented procedures, SOPs, and reference guides
-```
+## Folders
+- `files/audits/` — current-state process maps, gap analyses
+- `files/proposals/` — improvement recommendations, implementation plans
+- `files/procedures/` — final documented procedures and SOPs

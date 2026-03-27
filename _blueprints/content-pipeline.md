@@ -1,62 +1,66 @@
 ---
 name: content-pipeline
-type: playbook
 description: Plan, draft, edit, and publish content on a repeatable schedule.
 parameters:
   - content_type: What kind of content — blog posts, newsletters, social, video scripts?
   - publishing_channel: Where does it get published?
-references:
-  - upload: Your best-performing published pieces or content analytics
 ---
 
-# Content Pipeline (content_type, publishing_channel)
+# Content Pipeline
 
-A workspace for teams and solo creators who need to move content from idea to published — consistently and on schedule. This playbook turns scattered writing efforts into a reliable production line with clear stages, quality gates, and a calendar to keep everything on track.
+**Follow-up:** What are you writing about, and where does it go?
 
-## Follow-up question
-What are you writing about, and where does it go?
+## Skills
 
-## Core problems this workspace solves
+### Plan Content
+Build an editorial calendar with topics, formats, and dates.
+1. Define content goals and audience
+2. Brainstorm topics aligned with goals
+3. Sequence and assign target dates
+4. Choose format for each piece
 
-- Publishing is inconsistent — content goes out in bursts followed by long silences, with no predictable cadence.
-- There is no editorial calendar — ideas live in scattered notes, DMs, and heads, making it impossible to plan ahead.
-- Quality varies wildly — some pieces are polished, others go out half-baked because there is no structured review step.
-- Editing is a bottleneck — everything funnels through one person or one vague "make it better" pass, slowing the whole pipeline.
-- Repurposing never happens — published content sits idle instead of being adapted for other formats or channels.
+In: goals, audience, time frame | Out: editorial calendar → `files/calendar/`
 
-## Skill blueprints to use
+### Draft
+Write a content piece from brief to polished draft.
+1. Clarify purpose, audience, and format
+2. Outline sections and key points
+3. Draft full piece
+4. Review for coherence and tone
 
-- **Plan Content** — Build and maintain an editorial calendar so you always know what is coming next and when.
-- **Draft** — Generate first drafts from outlines, briefs, or raw ideas so the blank-page problem disappears.
-- **Edit** — Run structured editing passes (clarity, structure, voice) to catch issues before they reach readers.
-- **Review** — Get a final quality check against your brand voice guide and publishing standards.
-- **Summarize** — Condense published pieces into social posts, newsletters, or internal briefs for repurposing.
+In: brief, audience | Out: first draft → `files/drafts/`
 
-## Skill outputs
+### Edit
+Improve existing content for clarity, tone, and structure.
+1. Read the original in full
+2. Diagnose issues with clarity, flow, or redundancy
+3. Revise while preserving voice and intent
+4. Present improved version with change summary
 
-| Skill | Output | Format | Folder |
-|--------|--------|--------|--------|
-| Plan Content | Editorial calendar with topics, dates, and channels | Markdown | `files/calendar/` |
-| Draft | First draft of a content piece | Markdown | `files/drafts/` |
-| Edit | Revised draft with tracked changes and notes | Markdown | `files/drafts/` |
-| Review | Final quality-checked version ready to publish | Markdown | `files/published/` |
-| Summarize | Repurposed versions for other channels | Markdown | `files/drafts/` |
+In: draft, style guidelines | Out: revised draft → `files/drafts/`
 
-## Required tools & skills
+### Review
+Final quality check and periodic content performance review.
+1. Review what was published in the period
+2. Check against editorial goals
+3. Surface blockers or gaps
+4. Set priorities for next cycle
 
-- **Google Calendar** (MCP) — Manage the publishing schedule, set deadlines, and track what is due when.
+In: published content, metrics | Out: quality review → `files/published/`
 
-## Useful references
+### Summarize
+Repurpose published content for other channels.
+1. Read the full source piece
+2. Extract key points for the target format
+3. Structure for the new channel
+4. Calibrate length and tone
 
-- **Brand voice guide** — The source of truth for how your content should sound, including vocabulary, sentence style, and personality.
-- **Content strategy** — Your goals, target audiences, content pillars, and distribution channels.
-- **Past top-performing content** — Examples of what has worked before, used as models for drafting and editing.
+In: published piece, target channel | Out: repurposed version → `files/drafts/`
 
-## Folder structure
+## Tools
+- **Google Calendar** — manage the publishing schedule and deadlines
 
-```
-files/
-  drafts/       # Work-in-progress pieces at any stage
-  published/    # Final versions that have gone live
-  calendar/     # Editorial calendar exports, schedules, and planning docs
-```
+## Folders
+- `files/drafts/` — work-in-progress pieces at any stage
+- `files/published/` — final versions that have gone live
+- `files/calendar/` — editorial calendar and planning docs

@@ -1,70 +1,67 @@
 ---
 name: product-discovery
-type: playbook
-description: Research users, validate ideas, and write specs that are grounded in evidence.
+description: Research users, validate ideas, and write specs grounded in evidence.
 parameters:
   - product_type: What kind of product — SaaS, mobile app, hardware, internal tool?
   - user_segment: Who are the target users?
-references:
-  - search: Competitor landscape and feature comparisons in the space
 ---
 
-# Product Discovery (product_type, user_segment)
+# Product Discovery
 
-A workspace for teams and individuals who need to move from assumptions to validated product decisions. This playbook structures the messy front-end of product work — from raw user signals to clear, actionable specs.
+**Follow-up:** What kind of product are you exploring?
 
+## Skills
 
-## Follow-up question
-What kind of product are you exploring?
+### Research
+Investigate user needs, market context, or technical feasibility.
+1. Define the question and scope
+2. Gather information from sources
+3. Organize findings into themes
+4. Deliver summary with sources cited
 
-## Core problems this workspace solves
+In: research question, constraints | Out: structured findings → `files/research/`
 
-- User needs are assumed rather than validated, leading to features nobody wants
-- Ideas jump straight to build without supporting evidence or clear rationale
-- Specs are vague, leaving engineers to guess at intent and edge cases
-- Research lives in scattered docs, slides, and Slack threads — impossible to synthesize
-- Decisions lack traceability: no one remembers why something was prioritized
+### Synthesize
+Combine scattered research into actionable insights.
+1. Collect all inputs (interviews, data, references)
+2. Extract key points from each source
+3. Cluster into themes and cross-reference
+4. Write thematic summary with attribution
 
+In: multiple sources (interview notes, screenshots, analytics CSVs, PDFs) | Out: insight synthesis → `files/insights/`
 
-## Skill blueprints to use
+### Decide
+Evaluate options and document the decision with rationale.
+1. Frame the decision as a clear question
+2. List options including "do nothing"
+3. Score against key criteria
+4. Document recommendation with trade-offs
 
-- **Research** — Capture and structure findings from user interviews, surveys, and analytics
-- **Synthesize** — Turn raw research into patterns, themes, and actionable insights
-- **Decide** — Frame decisions clearly, weigh options against evidence, and document outcomes
-- **Draft** — Write specs, briefs, and proposals that are grounded in research
-- **Compare** — Evaluate competing ideas, features, or approaches side by side
+In: options, evidence | Out: decision record → `files/insights/`
 
+### Draft
+Write product specs, briefs, or proposals.
+1. Clarify purpose, audience, and format
+2. Outline sections and key points
+3. Draft full document
+4. Review for coherence and completeness
 
-## Skill outputs
+In: brief, research findings | Out: product spec → `files/specs/`
 
-| Skill | Output | Format | Folder |
-|--------|--------|--------|--------|
-| Research | Structured findings from interviews, surveys, or analytics | Markdown | `files/research/` |
-| Synthesize | Patterns and actionable insights across sources | Markdown | `files/insights/` |
-| Decide | Decision record with options and evidence | Markdown | `files/insights/` |
-| Draft | Product spec, brief, or proposal | Markdown | `files/specs/` |
-| Compare | Side-by-side evaluation of ideas or features | Markdown | `files/insights/` |
+### Compare
+Evaluate competing ideas or features side-by-side.
+1. List options to compare
+2. Set evaluation criteria
+3. Score each option against criteria
+4. Recommend with trade-offs noted
 
-## Required tools & skills
+In: options, criteria | Out: comparison matrix → `files/insights/`
 
-- **WebSearch** — Look up market context, competitor features, and industry benchmarks
-- **Google Calendar** — Schedule and track user interviews and stakeholder syncs
-- File reading and writing for managing research artifacts and spec documents
+## Tools
+- **WebSearch** — market context, competitor features, industry benchmarks
+- **Google Calendar** — schedule user interviews and stakeholder syncs
 
-
-## Useful references
-
-- User research reports, interview transcripts, and survey results
-- Product strategy documents and vision statements
-- Competitor analysis and feature comparisons
-- Existing specs or PRDs for context on past decisions
-- Analytics dashboards or exported usage data
-
-
-## Folder structure
-
-Suggested subfolders inside `files/`:
-
-- `files/research/` — Interview notes, survey data, analytics exports
-- `files/specs/` — Product specs, PRDs, feature briefs
-- `files/insights/` — Synthesized findings, opportunity maps, decision logs
+## Folders
+- `files/research/` — interview notes, survey data, analytics exports
+- `files/specs/` — product specs, PRDs, feature briefs
+- `files/insights/` — synthesized findings, opportunity maps, decision logs

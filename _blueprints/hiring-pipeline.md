@@ -1,65 +1,66 @@
 ---
 name: hiring-pipeline
-type: playbook
-description: Write job posts, design screening processes, and prepare structured interviews for open positions.
+description: Write job posts, design screening, prepare structured interviews.
 parameters:
-  - role: What role are you hiring for?
+  - role: What role?
   - seniority_level: What level — junior, mid, senior, lead?
-references:
-  - upload: The job description or role requirements document
 ---
 
-# Hiring Pipeline (role, seniority_level)
+# Hiring Pipeline
 
-A workspace for managing the end-to-end hiring process for one or more open roles. From writing the job description through screening candidates to preparing interviewers with the right questions.
+**Follow-up:** What role are you hiring for?
 
-## Follow-up question
-What role are you hiring for?
+## Skills
 
-## Core problems this workspace solves
+### Draft
+Write job descriptions from role requirements.
+1. Clarify role, audience, format
+2. Outline sections and key points
+3. Draft full document
+4. Review for coherence and completeness
 
-- Job descriptions are vague or bloated, attracting the wrong candidates and discouraging qualified ones.
-- Screening is inconsistent — different reviewers evaluate resumes using different criteria, creating bias and missed talent.
-- Interviewers go in unprepared, asking ad-hoc questions that don't map to the skills the role actually requires.
-- Candidate experience suffers because communication is slow, feedback loops are long, and the process feels disorganized.
-- Hiring decisions are made on gut feeling rather than structured evaluation against defined competencies.
+In: role requirements, audience | Out: job description → `files/positions/`
 
-## Skill blueprints to use
+### Design Form
+Build screening rubrics and scorecards for consistent evaluation.
+1. Define what to evaluate and why
+2. Group criteria into sections
+3. Write clear, unambiguous questions
+4. Specify answer formats and scoring
 
-- **Draft** — Write clear, specific job descriptions that accurately reflect the role and attract the right candidates.
-- **Design Form** — Build structured screening rubrics and scorecards so every candidate is evaluated on the same criteria.
-- **Checklist** — Create step-by-step process checklists for each hiring stage to keep things moving and consistent.
-- **Evaluate** — Score candidates against competency frameworks after interviews, replacing subjective impressions with structured assessment.
-- **Decide** — Compare finalists using weighted criteria and make a defensible hiring recommendation.
+In: role requirements, competencies | Out: screening rubric → `files/templates/`
 
-## Skill outputs
+### Checklist
+Standardize each hiring stage into repeatable steps.
+1. Map the process end-to-end
+2. Break into discrete, verb-driven steps
+3. Add quality checks at critical points
+4. Group into logical sections
 
-| Skill | Output | Format | Folder |
-|--------|--------|--------|--------|
-| Draft | Job description for the open role | Markdown | `files/positions/` |
-| Design Form | Screening rubric or scorecard | Markdown | `files/templates/` |
-| Checklist | Step-by-step process checklist per hiring stage | Markdown | `files/templates/` |
-| Evaluate | Candidate evaluation against competency framework | Markdown | `files/candidates/` |
-| Decide | Hiring recommendation comparing finalists | Markdown | `files/candidates/` |
+In: process description, failure points | Out: stage checklist → `files/templates/`
 
-## Required tools & skills
+### Evaluate
+Score candidates against defined competencies.
+1. State the evaluation question neutrally
+2. Map arguments for and against
+3. Rate strength of each argument
+4. Conclude with confidence level
 
-- **Google Calendar** — For scheduling interviews, coordinating panel availability, and managing candidate timelines.
-- **File management** — Reading and writing markdown files for job descriptions, rubrics, and candidate evaluations.
+In: candidate materials, competency framework | Out: evaluation → `files/candidates/`
 
-## Useful references
+### Decide
+Compare finalists and document the hiring decision.
+1. Frame the decision as a clear question
+2. List candidates with key differentiators
+3. Score against 3-5 criteria
+4. Recommend with trade-offs noted
 
-- Job description templates for common role types
-- Competency frameworks (technical skills, behavioral indicators, culture alignment)
-- Interview rubrics with scoring guides
-- Structured interview question banks organized by competency
-- Candidate communication templates (acknowledgment, scheduling, rejection, offer)
+In: candidate evaluations | Out: hiring recommendation → `files/candidates/`
 
-## Folder structure
+## Tools
+- **Google Calendar** — schedule interviews, manage timelines
 
-```
-files/
-  positions/     # Job descriptions, role requirements, and hiring plans
-  candidates/    # Screening notes, interview evaluations, and scorecards
-  templates/     # Reusable rubrics, question banks, and communication templates
-```
+## Folders
+- `files/positions/` — job descriptions, role requirements
+- `files/candidates/` — evaluations, scorecards
+- `files/templates/` — rubrics, question banks, comms templates

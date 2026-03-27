@@ -1,70 +1,66 @@
 ---
 name: roadmap-planning
-type: playbook
-description: Prioritize features, plan milestones, and align stakeholders around a shared roadmap.
+description: Prioritize features, plan milestones, and align stakeholders around a roadmap.
 parameters:
   - product: What product or initiative is this roadmap for?
-  - planning_horizon: How far out are you planning — one quarter, six months, a year?
-references:
-  - upload: Current backlog, feature request list, or strategy doc
+  - planning_horizon: How far out — one quarter, six months, a year?
 ---
 
-# Roadmap Planning (product, planning_horizon)
+# Roadmap Planning
 
-A workspace for turning a backlog of ideas into a sequenced, stakeholder-aligned plan. This playbook helps you prioritize ruthlessly, define clear milestones, and keep everyone on the same page as plans evolve.
+**Follow-up:** What are you building, and what's the big goal?
 
+## Skills
 
-## Follow-up question
-What are you building, and what's the big goal?
+### Prioritize
+Rank features or initiatives by impact, effort, and urgency.
+1. Collect all items to prioritize
+2. Define 2-4 scoring criteria
+3. Score each item against criteria
+4. Rank and present with rationale
 
-## Core problems this workspace solves
+In: backlog, constraints | Out: scored priority list → `files/decisions/`
 
-- Too many competing priorities with no framework for choosing between them
-- No clear sequencing — everything feels equally urgent
-- Stakeholders are misaligned on what's coming and why
-- Progress is hard to track across initiatives and milestones
-- Roadmap documents go stale because updating them is painful
+### Map
+Lay out phases and milestones as a structured timeline.
+1. Define the end state
+2. Break into 2-5 sequential phases
+3. Set milestones and dependencies
+4. Estimate timing for each phase
 
+In: initiative scope, dependencies | Out: phased roadmap → `files/roadmaps/`
 
-## Skill blueprints to use
+### Plan
+Break an initiative into milestones with owners and next steps.
+1. Clarify the goal and constraints
+2. Define measurable key results
+3. Break into milestones with timing
+4. List first actions
 
-- **Prioritize** — Score and rank features or initiatives using consistent criteria
-- **Map** — Lay out dependencies, sequences, and timelines visually
-- **Plan** — Break initiatives into milestones with owners, dates, and success criteria
-- **Decide** — Resolve trade-offs between competing priorities with clear reasoning
-- **Debrief** — Review what shipped, what slipped, and what to adjust going forward
+In: initiative, constraints | Out: initiative plan → `files/roadmaps/`
 
+### Decide
+Make priority calls with structured trade-off analysis.
+1. Frame the decision as a clear question
+2. List options including "do nothing"
+3. Score against key criteria
+4. Document recommendation with trade-offs
 
-## Skill outputs
+In: options, criteria | Out: decision record → `files/decisions/`
 
-| Skill | Output | Format | Folder |
-|--------|--------|--------|--------|
-| Prioritize | Scored and ranked feature/initiative list | Markdown | `files/decisions/` |
-| Map | Dependency map and sequenced timeline | Markdown | `files/roadmaps/` |
-| Plan | Initiative breakdown with milestones and owners | Markdown | `files/roadmaps/` |
-| Decide | Trade-off analysis and priority decision record | Markdown | `files/decisions/` |
-| Debrief | Ship/slip review with adjustments for next cycle | Markdown | `files/updates/` |
+### Debrief
+Run ship/slip reviews and capture adjustments.
+1. Read raw notes from the review
+2. Extract decisions and action items
+3. Identify what shipped, slipped, and why
+4. Format adjustments for next cycle
 
-## Required tools & skills
+In: review notes, roadmap | Out: cycle review → `files/updates/`
 
-- **Google Calendar** — Coordinate planning sessions, reviews, and stakeholder check-ins
-- **Project management tools** — Integration with tools like Linear, Jira, or Notion if available via MCP
-- File reading and writing for maintaining roadmap artifacts
+## Tools
+- **Google Calendar** — coordinate planning sessions and stakeholder check-ins
 
-
-## Useful references
-
-- Product strategy and vision documents
-- Capacity constraints and team allocation data
-- Customer feedback logs, feature requests, and support ticket themes
-- Previous roadmaps and retrospective notes
-- Business goals, OKRs, or quarterly targets
-
-
-## Folder structure
-
-Suggested subfolders inside `files/`:
-
-- `files/roadmaps/` — Current and past roadmap documents, timeline views
-- `files/decisions/` — Priority calls, trade-off analyses, scoring frameworks
-- `files/updates/` — Stakeholder updates, progress reports, changelog entries
+## Folders
+- `files/roadmaps/` — current and past roadmap documents, timeline views
+- `files/decisions/` — priority calls, trade-off analyses, scoring frameworks
+- `files/updates/` — stakeholder updates, progress reports, changelog entries

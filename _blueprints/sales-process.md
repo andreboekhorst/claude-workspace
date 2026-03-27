@@ -1,71 +1,68 @@
 ---
 name: sales-process
-type: playbook
 description: Research prospects, craft outreach, build proposals, and manage follow-up.
 parameters:
   - product_or_service: What are you selling?
   - target_buyer: Who's the buyer — role, industry, company size?
-references:
-  - upload: Your ideal customer profile or existing sales deck
 ---
 
-# Sales Process (product_or_service, target_buyer)
+# Sales Process
 
-A workspace for running a disciplined sales motion — from identifying and
-researching prospects through personalized outreach, tailored proposals,
-and systematic follow-up. Keeps your pipeline moving and your messaging sharp.
+**Follow-up:** What do you sell, and to whom?
 
+## Skills
 
-## Follow-up question
-What do you sell, and to whom?
+### Research
+Build prospect and company profiles with pain points and signals.
+1. Define what to research (company, buyer, industry)
+2. Gather information from sources
+3. Organize into themes (pain points, triggers, context)
+4. Deliver summary with sources cited
 
-## Core problems this workspace solves
+In: prospect, company | Out: prospect profile → `files/prospects/`
 
-- Prospecting is unfocused, wasting time on poor-fit leads.
-- Outreach is generic and gets ignored because it does not speak to the buyer.
-- Proposals are not tailored to the prospect's specific situation and pain points.
-- Follow-up is inconsistent, so warm leads go cold.
-- There is no structured way to learn from wins and losses.
+### Draft
+Write personalized outreach, proposals, or follow-ups.
+1. Clarify purpose, audience, and format
+2. Outline key points and value props
+3. Draft full piece
+4. Review for tone and persuasiveness
 
+In: prospect research, brief | Out: outreach or proposal → `files/proposals/`
 
-## Skill blueprints to use
+### Pitch
+Build a persuasive value proposition or presentation narrative.
+1. Identify the audience and what they care about
+2. Define the core proposition in one sentence
+3. Build supporting arguments with evidence
+4. Anticipate objections and prepare responses
+5. Craft the narrative arc with a clear ask
 
-- **Research** — Investigate prospects, their companies, pain points, and buying signals.
-- **Draft** — Write personalized outreach emails, proposals, and follow-up sequences.
-- **Pitch** — Structure compelling value propositions and presentation narratives.
-- **Anticipate** — Predict objections and prepare responses before the conversation.
-- **Review** — Evaluate proposals and outreach for quality, relevance, and clarity.
+In: product, audience, desired outcome | Out: pitch document → `files/proposals/`
 
+### Anticipate
+Prepare for objections and draft strong responses.
+1. Identify the topic and audience perspective
+2. Brainstorm likely objections
+3. Categorize by theme and draft responses
+4. Flag weak spots with strategies
 
-## Skill outputs
+In: pitch, buyer concerns | Out: objection playbook → `files/prospects/`
 
-| Skill | Output | Format | Folder |
-|--------|--------|--------|--------|
-| Research | Prospect/company profile with pain points and signals | Markdown | `files/prospects/` |
-| Draft | Personalized outreach email, proposal, or follow-up | Markdown | `files/proposals/` |
-| Pitch | Value proposition or presentation narrative | Markdown | `files/proposals/` |
-| Anticipate | Objection list with prepared responses | Markdown | `files/prospects/` |
-| Review | Quality check on proposal or outreach | Markdown | `files/proposals/` |
+### Review
+Check proposal quality and review pipeline progress.
+1. Review accomplishments against targets
+2. Check deal status and conversion
+3. Surface blockers in the pipeline
+4. Set priorities for next period
 
-## Required tools & skills
+In: pipeline data, proposals | Out: pipeline review → `files/proposals/`
 
-- **WebSearch** — Research prospects, companies, industries, and competitive landscape.
-- **Google Calendar** — Schedule and track calls, demos, and follow-up reminders.
+## Tools
+- **WebSearch** — research prospects, companies, and competitive landscape
+- **Google Calendar** — schedule calls, demos, and follow-up reminders
 
-
-## Useful references
-
-- Ideal customer profiles describing your best-fit prospects.
-- Sales scripts, email templates, and proven outreach sequences.
-- Objection handling guides with common pushbacks and responses.
-- Case studies and proof points to reference in proposals.
-
-
-## Folder structure
-
-```
-files/
-  prospects/    # Research notes, company profiles, contact details
-  proposals/    # Tailored proposals, pitch decks, pricing sheets
-  pipeline/     # Deal tracking, follow-up logs, win/loss notes
-```
+## Folders
+- `files/prospects/` — research notes, company profiles, contact details
+- `files/proposals/` — tailored proposals, pitch decks, pricing sheets
+- `files/pipeline/` — deal tracking, follow-up logs, win/loss notes
